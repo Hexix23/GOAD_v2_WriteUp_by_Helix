@@ -1,8 +1,29 @@
 # GOAD V2
 
+# Table of contents
+1. [Enumeration](#enumeration)
+   1. [Pre-Access](#pre-access)
+      1. [Crackmapexec](#crackmapexec)
+      2. [NMAP](#nmap)
+      3. [DNS](#dns)
+   2. [SetUp etc/hosts & kerberos (linux) (Loading)](#set-up-etc-hosts-kerberos-linux-loading)
+      1. [etc/hosts](#etc-hosts)
+      2. [SetUp Kerberos in Linux](#setup-kerberos-in-linux)
+   3. [Anonymous Enumeration](#anonymous-enumeration)
+      1. [Anonymous User Enum](#anonymous-user-enum) 
+      2. [Anonymous Share Enumeration](#anonymous-share-enumeration)
+2. [Initial Access](#initial-access)
+   1. [AS-REP Roasting](#as-rep-roasting)
+      1. [Linux](#linux)
+      2. [Windows](#windows)
+   2. [Kerberoasting](#kerberoasting)
+      1. [Linux](#linux-1)
+      2. [Windows](#windows-1)
+3. [Bibliography](#bibliography)
+
 # Enumeration
 
-## Pre-Acces
+## Pre-Access
 
 Lets start doing some
 
