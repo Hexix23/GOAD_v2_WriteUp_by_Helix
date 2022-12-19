@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Dec 17 12:19:05 2022 as: nmap -Pn -p- -sC -sV -oA full_scan_goad -T4 -&#45;min-rate 2000 192.168.56.10-12,22-23 -->
+<nmaprun scanner="nmap" args="nmap -Pn -p- -sC -sV -oA full_scan_goad -T4 -&#45;min-rate 2000 192.168.56.10-12,22-23" start="1671275945" startstr="Sat Dec 17 12:19:05 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1671275945" endtime="1671276293"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.56.10" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sevenkingdoms.local" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65514">
+<extrareasons reason="no-response" count="65514" proto="tcp" ports="1-52,54-87,89-134,136-138,140-388,390-444,446-463,465-592,594-635,637-3267,3270-3388,3390-5984,5987-9388,9390-49667,49669-49672,49675,49677-49894,49896-56435,56437-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2022-12-17 11:22:58Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: sevenkingdoms.local0., Site: Default-First-Site-Name" hostname="KINGSLANDING" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: sevenkingdoms.local0., Site: Default-First-Site-Name" hostname="KINGSLANDING" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: SEVENKINGDOMS&#xa;  NetBIOS_Domain_Name: SEVENKINGDOMS&#xa;  NetBIOS_Computer_Name: KINGSLANDING&#xa;  DNS_Domain_Name: sevenkingdoms.local&#xa;  DNS_Computer_Name: kingslanding.sevenkingdoms.local&#xa;  DNS_Tree_Name: sevenkingdoms.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2022-12-17T11:24:05+00:00"><elem key="Target_Name">SEVENKINGDOMS</elem>
+<elem key="NetBIOS_Domain_Name">SEVENKINGDOMS</elem>
+<elem key="NetBIOS_Computer_Name">KINGSLANDING</elem>
+<elem key="DNS_Domain_Name">sevenkingdoms.local</elem>
+<elem key="DNS_Computer_Name">kingslanding.sevenkingdoms.local</elem>
+<elem key="DNS_Tree_Name">sevenkingdoms.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2022-12-17T11:24:05+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=kingslanding.sevenkingdoms.local&#xa;Not valid before: 2022-12-14T12:07:06&#xa;Not valid after:  2023-06-15T12:07:06"><table key="subject">
+<elem key="commonName">kingslanding.sevenkingdoms.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">kingslanding.sevenkingdoms.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">DE8B0CA6B45DD1ECDBFB251B929C857C91B282C1F64EBC7EE3FFCC1AFC637FA23487CDE40183CC65A566CB95CAC873B99117B9CA01ABF6D3414C845A469F290C9C49E754C6CCB33FE1F1FE33608906C1B8A0B0B1241A9DE3A72ADB7AB3D130DA0FC3110535F5616709F49038D330BC25E98576EEA710F8E07EBDDDBA39F07683EAB04DCD7D1F75722D6F08947728DDC827FB7CB6171FB9A998B7168B2BE1D6E4C09E8B61BEF1A6861DC5907B6ABAF0EDCD482074F958E23807E82CF22209B999F4C2D7F9529378A1FFC69ACED9E49D365EBCEC3BE1180697FBAF490633AC5F0453E5C3C16CD54E972CDB3295A43550216F6DC2459C0FF5ACE3896B7D85249B79</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T12:07:06</elem>
+<elem key="notAfter">2023-06-15T12:07:06</elem>
+</table>
+<elem key="md5">7bcdf13d86dd49c8f681dbdd0ccc901e</elem>
+<elem key="sha1">234037964c5efbb56a33ecca7857aa69dc6457d0</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDBDCCAeygAwIBAgIQUl2r1adwMrBKG8pRcySk8DANBgkqhkiG9w0BAQsFADAr&#xa;MSkwJwYDVQQDEyBraW5nc2xhbmRpbmcuc2V2ZW5raW5nZG9tcy5sb2NhbDAeFw0y&#xa;MjEyMTQxMjA3MDZaFw0yMzA2MTUxMjA3MDZaMCsxKTAnBgNVBAMTIGtpbmdzbGFu&#xa;ZGluZy5zZXZlbmtpbmdkb21zLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEA3osMprRd0ezb+yUbkpyFfJGygsH2Trx+4//MGvxjf6I0h83kAYPM&#xa;ZaVmy5XKyHO5kRe5ygGr9tNBTIRaRp8pDJxJ51TGzLM/4fH+M2CJBsG4oLCxJBqd&#xa;46cq23qz0TDaD8MRBTX1YWcJ9JA40zC8JemFdu6nEPjgfr3dujnwdoPqsE3NfR91&#xa;ci1vCJR3KN3IJ/t8thcfuamYtxaLK+HW5MCei2G+8aaGHcWQe2q68O3NSCB0+Vji&#xa;OAfoLPIiCbmZ9MLX+VKTeKH/xprO2eSdNl687DvhGAaX+69JBjOsXwRT5cPBbNVO&#xa;lyzbMpWkNVAhb23CRZwP9azjiWt9hSSbeQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAGlKw3ohIMJo&#xa;pldyZHGdxZAm8IsHG/NfVytCgaTC7sYUFauvtrTf9qc9yXKa023BRFPBK3UGeR3g&#xa;gU9GttYZyiAxVYU+4sLOuoy+6LPg1bW2iYlfUMlfL94Vixn49RZ9FV2SDBnrcb4a&#xa;D/aYveXGFzTRW7bV1VGBeFzV13Le/Yd3PEyhx9gAismEejsOMB2VxLWZUwDseg4z&#xa;HBxml6rNkLshLIW7DeJcCDW8UTRdTAW6cmYzoZATvnXTpNywNaPBHHpsQkWzwkI6&#xa;/XkiqCSjfYzobokVelIBSyHwJbFJALK6NsRea2TYfEL7qp+lpIBta8G+bjJhkRLF&#xa;8wZp+gWKiBg=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="5986"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-cert" output="Subject: commonName=VAGRANT&#xa;Subject Alternative Name: DNS:VAGRANT, DNS:vagrant&#xa;Not valid before: 2022-12-14T03:48:40&#xa;Not valid after:  2025-12-13T03:48:40"><table key="subject">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">BF624E5A3136F41A0C4FF4CFDD3ECB247C104B80C61654B0F5924B92392B43BB98EE49CE5AA4473D80596CC5ECA4BA74BE5707CDC12E98C778929A57B446C2C053A0CFB69140EB074C7184114ED3388CC55D5BD0E2BFB9A8F17E895D46F865149DFB72C82C310D1DA6C9B87A3FD64AD781D0789CD38AD29D6D6864BA888EA4F22E5BF96E5CA32E61ED120CBD0F7CB2D7587F80551D9588A7F714CF8E4AF6CD7DDEF1BC3FEDE1125B3597F64E73885B8EE96843AA1F72A5F214D0070620A9CD86F86FF6F145A060BAC39C70BE64666292520D2DB9E07E12603666FAC2B9F6F37A21DC233798F769D809E77A9718DA98ACD054543651A3B4B88A2CD69398283466F2951B7A93E3B8D6F5EF87CDC3243A6370A195B30CA302D189945DB5B7A999A0758EAD21C8E3D6A91EC43E31E271886B6E8843838898F9EE82B0E38953978009BE0380316C77182C4749F52B67CDECC25E4C1E22D83D8D8E691DB2414BBBD1409F7CE5B5E3D205403180C3EEB6F29AF649D168F810E04090B995E99A5FEF63E3FB94DF7B20BF07AC9A514E7B0371232DD05DBA1B5357B461AA33831710253B42874F89EB71581ECCA73910D28EC2F6704E19A82F65FAA0A0E0A62D2A4A0A4DD00E1BBD0CE21E8B4F20A198CCBBA63AEA4D312804953706BE34BC9B9C86EBA470BACEFFA36F6A25E23BDC7B3B60B5AF55B62C602557C13E3E96BF1F103EE28E65</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:VAGRANT, DNS:vagrant</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">7E:02:47:F4:06:D9:B7:68:29:3E:71:42:46:51:68:E1:6E:97:07:F7</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T03:48:40</elem>
+<elem key="notAfter">2025-12-13T03:48:40</elem>
+</table>
+<elem key="md5">54aba13616abe466c0a9a126a39d21d9</elem>
+<elem key="sha1">40f4623a61ff9bdaca27ff291c09050bf82a5d4c</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFETCCAvmgAwIBAgIQLIDWFcIjQ61I3HHSYXcxlzANBgkqhkiG9w0BAQsFADAS&#xa;MRAwDgYDVQQDDAdWQUdSQU5UMB4XDTIyMTIxNDAzNDg0MFoXDTI1MTIxMzAzNDg0&#xa;MFowEjEQMA4GA1UEAwwHVkFHUkFOVDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC&#xa;AgoCggIBAL9iTloxNvQaDE/0z90+yyR8EEuAxhZUsPWSS5I5K0O7mO5JzlqkRz2A&#xa;WWzF7KS6dL5XB83BLpjHeJKaV7RGwsBToM+2kUDrB0xxhBFO0ziMxV1b0OK/uajx&#xa;foldRvhlFJ37csgsMQ0dpsm4ej/WSteB0Hic04rSnW1oZLqIjqTyLlv5blyjLmHt&#xa;Egy9D3yy11h/gFUdlYin9xTPjkr2zX3e8bw/7eESWzWX9k5ziFuO6WhDqh9ypfIU&#xa;0AcGIKnNhvhv9vFFoGC6w5xwvmRmYpJSDS254H4SYDZm+sK59vN6IdwjN5j3adgJ&#xa;53qXGNqYrNBUVDZRo7S4iizWk5goNGbylRt6k+O41vXvh83DJDpjcKGVswyjAtGJ&#xa;lF21t6mZoHWOrSHI49apHsQ+MeJxiGtuiEODiJj57oKw44lTl4AJvgOAMWx3GCxH&#xa;SfUrZ83swl5MHiLYPY2OaR2yQUu70UCffOW149IFQDGAw+628pr2SdFo+BDgQJC5&#xa;lemaX+9j4/uU33sgvwesmlFOewNxIy3QXbobU1e0YaozgxcQJTtCh0+J63FYHsyn&#xa;ORDSjsL2cE4ZqC9l+qCg4KYtKkoKTdAOG70M4h6LTyChmMy7pjrqTTEoBJU3Br40&#xa;vJuchuukcLrO/6NvaiXiO9x7O2C1r1W2LGAlV8E+Ppa/HxA+4o5lAgMBAAGjYzBh&#xa;MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAbBgNVHREEFDAS&#xa;ggdWQUdSQU5Uggd2YWdyYW50MB0GA1UdDgQWBBR+Akf0Btm3aCk+cUJGUWjhbpcH&#xa;9zANBgkqhkiG9w0BAQsFAAOCAgEAsFn1DcsGRTIdG1cCCUAsYenEQecolGcFRoBb&#xa;8i19nqp8Iizl0rsMpAoEcl+6rZ7NDrZ/OTeS5t6vaXA10NblTecX9wHtiA2+TfKB&#xa;jNKSyanP93DVAp7tTbQLI5eHSxkVuSoq8ZBVtusW6AngwUGk2xclB5I3kKPBXdOX&#xa;mRGxpdlkh/0m/AsCr/Ln5M/aQPO4kPLt/zGS3PrsAFY3H2xihZVaqG/sBLNU9uON&#xa;ev/G3r0zb85npyQR1IEJ3lW5/5K8Y4ZRSTzMa6Hty4730HZTlZt81kd39YVb8bCL&#xa;PcwAOhg4xNGCViCAikyCny8OrSPCtn0zh0zFc25qvAzlrvle+W6FWeDlPsdYdVOf&#xa;91WxK2t80SL0Y9ADv+ZpYhiHoaO4wv4W9CcngqqqYR/cRD1k6Y1SlIlVwy6z3WqQ&#xa;x9pkTHZ0vyynZdwco3u6MoxLoLtcRA9m7BL7/4A9vTJYu9B3MUp/o96fleqbs1+n&#xa;eG8YDbasNI20kvWLGL7lfWFSrnJuIfDQ9X7A8HADrwHtfA8O92RasA+Tih0ltoAY&#xa;ou5TVe8MvARSSnMJOQ+DFMBo00pC5d+NEprvdZOWzsDzYUrKxB79WE4/hqMijXSq&#xa;dvguWR7d6GP8AOt/V526h+IcwjsGs7EaPqrvg4vg/VGqaWDckJj3q4L8knrh36lc&#xa;jdgLHh8=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49673"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49674"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49676"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49895"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="56436"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb2-time" output="&#xa;  date: 2022-12-17T11:24:05&#xa;  start_date: N/A"><elem key="date">2022-12-17T11:24:05</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="nbstat" output="NetBIOS name: KINGSLANDING, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:5d:26:f4 (Oracle VirtualBox virtual NIC)"/><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script></hostscript><times srtt="199" rttvar="21" to="100000"/>
+</host>
+<host starttime="1671275945" endtime="1671276293"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.56.11" addrtype="ipv4"/>
+<hostnames>
+<hostname name="winterfell.north.sevenkingdoms.local" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65514">
+<extrareasons reason="no-response" count="65514" proto="tcp" ports="1-52,54-87,89-134,136-138,140-388,390-444,446-463,465-592,594-635,637-3267,3270-3388,3390-5984,5987-9388,9390-49667,49669,49672-49675,49677-49714,49716-54483,54485-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2022-12-17 11:22:58Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: sevenkingdoms.local0., Site: Default-First-Site-Name" hostname="WINTERFELL" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: sevenkingdoms.local0., Site: Default-First-Site-Name" hostname="WINTERFELL" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=winterfell.north.sevenkingdoms.local&#xa;Not valid before: 2022-12-14T12:16:27&#xa;Not valid after:  2023-06-15T12:16:27"><table key="subject">
+<elem key="commonName">winterfell.north.sevenkingdoms.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">winterfell.north.sevenkingdoms.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">943ADD932AE59443AD5545371F7828CECC51F9E41E2400A9CAA1AD3CE4931E77CD569661976483C76280D55ECB7DBF68677DEF1E2716CA76F72B7C497B402A89DE1ECC2AD5E87036ABC486702A2E3B091AAD6609A4ED7C1F6580E26ADDC124F3003DB85158D12FEC4379C4CD7A3E442A8E29AD0EDC0D0620A7B59761F4ED2538FDB68E29B061D3B2916F7F0C24298FED7682A6F8DF8AAC6DDDD2E8D01ACC521DB9DFF8C401D5031B560B59E430ACD4DB38419B495BA8CA3497F26FC12A0EF3EEEE5D4E025A2C7897DB23254A89A93F573F4B11B4964D19242C01A033C95DE22DA81410A2FB4FFE9646CC856CEE948DB85EC52A91A986B290747BD05DC6F7B505</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T12:16:27</elem>
+<elem key="notAfter">2023-06-15T12:16:27</elem>
+</table>
+<elem key="md5">69fa250c6e55b3b40575e638580eb40d</elem>
+<elem key="sha1">954485f27f2f66e6f101bf2febae1c7a9d8aded5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDDDCCAfSgAwIBAgIQM+fL4bQHmKJCCMO1qc/7gDANBgkqhkiG9w0BAQsFADAv&#xa;MS0wKwYDVQQDEyR3aW50ZXJmZWxsLm5vcnRoLnNldmVua2luZ2RvbXMubG9jYWww&#xa;HhcNMjIxMjE0MTIxNjI3WhcNMjMwNjE1MTIxNjI3WjAvMS0wKwYDVQQDEyR3aW50&#xa;ZXJmZWxsLm5vcnRoLnNldmVua2luZ2RvbXMubG9jYWwwggEiMA0GCSqGSIb3DQEB&#xa;AQUAA4IBDwAwggEKAoIBAQCUOt2TKuWUQ61VRTcfeCjOzFH55B4kAKnKoa085JMe&#xa;d81WlmGXZIPHYoDVXst9v2hnfe8eJxbKdvcrfEl7QCqJ3h7MKtXocDarxIZwKi47&#xa;CRqtZgmk7XwfZYDiat3BJPMAPbhRWNEv7EN5xM16PkQqjimtDtwNBiCntZdh9O0l&#xa;OP22jimwYdOykW9/DCQpj+12gqb434qsbd3S6NAazFIdud/4xAHVAxtWC1nkMKzU&#xa;2zhBm0lbqMo0l/JvwSoO8+7uXU4CWix4l9sjJUqJqT9XP0sRtJZNGSQsAaAzyV3i&#xa;LagUEKL7T/6WRsyFbO6UjbhexSqRqYaykHR70F3G97UFAgMBAAGjJDAiMBMGA1Ud&#xa;JQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsFAAOCAQEA&#xa;UBv4ZAenfg1rig96b6FDNqWFJaK+dB4sE7qpSWUWyzhB0mbstJcQXitOkzxSk/DF&#xa;zjJ9dZPITgDoCTQcGGxhp39atj9/NKUdf0RjtfwzR626CVSwJwcGgzeaqkgpANFp&#xa;sHA9WWYH46kLEY8bIpgbj0nIOJUa2pgZevmLeimFPLGroa4IiBZyCLUsdJAdprIe&#xa;Q4evC9cIlylNIrjsDtayrZ6aMNXHnsaJQhc89G0lWDb+NLW2nKh0Sg1iQAoJqgfB&#xa;wrn8mgxq+Ec0J3+UwXUK6uceNQtlqO3GH8codHTKYrgsGsIgaYth9xH75P/Q5pW6&#xa;e9TSRyvBelV+p3jQG9m5Rg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="5986"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="ssl-cert" output="Subject: commonName=VAGRANT&#xa;Subject Alternative Name: DNS:VAGRANT, DNS:vagrant&#xa;Not valid before: 2022-12-14T03:51:12&#xa;Not valid after:  2025-12-13T03:51:12"><table key="subject">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">B811723A8DD932A2971FF275D67D70DB31DD311555E886291C775BF36AC079D2396565EB784D4879AE6FF9D2DF047E383310A715AC7265CDD11C8B7D0754A8AC5FED4753632DDFC3E4A2316C37AA4808CD3FC4868AA993FC42025A733008065A2E720239F122344AD2637C2DFFCB7D3F9C78050F4A714143680FE7009F95A86AE387BFFCDB09FF1C9807DB0DC4E0A88D2126B721F7B258784F6A2B9456064FF22C1B8BA2E6593428E1D44FB4CCDA2A7331F15512D3815E13825C1CBE77AF0562A329E5799E11DBEC1BFA1BA0EBC9C99D32EA23D738AFD83F0E7673AC5FCCD49D995738782D1CFDB0AD36A151BFC3115967BA75283A1DD539F5B4F24683124C85FAC899F1655CA8D570BB68719AF3D5D540B3F1E6499AD6A8D15054F2CE55082A62556288DB4CCF900E91E2259A5835983574A2F80F8660D775D64E8EE8130EBEEFEA90F74C1C88254BE502152138AA50DFE988473CD3D0D3BC5808A86645BDB1DEBD4A846C7029662A1E97B47F46BBD896BCBB0DE0304FCA96E27A15C64AAEAFF4488ECCC5E543F426F845AE37758E11D5249B0AC8FF2BB5E965C30CCD4AD7F7AC7129F0BAED67B2C6368D15C0CEC76E5FD1FA9D1714376155833CB2D9C6B5ACDF2815E1D64C7849C060F500557F81F892C69AA75519338937FE5FBC8AC1AE775E26DEC9B5BC768BAC3D9F29A97105FE4764EE0581CC5A171EF437B0523F6249</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:VAGRANT, DNS:vagrant</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">A6:ED:CF:BB:42:A5:97:5A:25:3D:54:74:89:87:46:90:FE:99:89:9E</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T03:51:12</elem>
+<elem key="notAfter">2025-12-13T03:51:12</elem>
+</table>
+<elem key="md5">7419b5a4fa700af2b850a67137bf51b2</elem>
+<elem key="sha1">b7531b5786366f615a59fbe62f58a166f6f67dba</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFETCCAvmgAwIBAgIQZYUllut6tINCMzn9aed3ADANBgkqhkiG9w0BAQsFADAS&#xa;MRAwDgYDVQQDDAdWQUdSQU5UMB4XDTIyMTIxNDAzNTExMloXDTI1MTIxMzAzNTEx&#xa;MlowEjEQMA4GA1UEAwwHVkFHUkFOVDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC&#xa;AgoCggIBALgRcjqN2TKilx/yddZ9cNsx3TEVVeiGKRx3W/NqwHnSOWVl63hNSHmu&#xa;b/nS3wR+ODMQpxWscmXN0RyLfQdUqKxf7UdTYy3fw+SiMWw3qkgIzT/Ehoqpk/xC&#xa;AlpzMAgGWi5yAjnxIjRK0mN8Lf/LfT+ceAUPSnFBQ2gP5wCflahq44e//NsJ/xyY&#xa;B9sNxOCojSEmtyH3slh4T2orlFYGT/IsG4ui5lk0KOHUT7TM2ipzMfFVEtOBXhOC&#xa;XBy+d68FYqMp5XmeEdvsG/oboOvJyZ0y6iPXOK/YPw52c6xfzNSdmVc4eC0c/bCt&#xa;NqFRv8MRWWe6dSg6HdU59bTyRoMSTIX6yJnxZVyo1XC7aHGa89XVQLPx5kma1qjR&#xa;UFTyzlUIKmJVYojbTM+QDpHiJZpYNZg1dKL4D4Zg13XWTo7oEw6+7+qQ90wciCVL&#xa;5QIVITiqUN/piEc809DTvFgIqGZFvbHevUqEbHApZioel7R/RrvYlry7DeAwT8qW&#xa;4noVxkqur/RIjszF5UP0JvhFrjd1jhHVJJsKyP8rtellwwzNStf3rHEp8LrtZ7LG&#xa;No0VwM7Hbl/R+p0XFDdhVYM8stnGtazfKBXh1kx4ScBg9QBVf4H4ksaap1UZM4k3&#xa;/l+8isGud14m3sm1vHaLrD2fKalxBf5HZO4FgcxaFx70N7BSP2JJAgMBAAGjYzBh&#xa;MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAbBgNVHREEFDAS&#xa;ggdWQUdSQU5Uggd2YWdyYW50MB0GA1UdDgQWBBSm7c+7QqWXWiU9VHSJh0aQ/pmJ&#xa;njANBgkqhkiG9w0BAQsFAAOCAgEAdoG02azhgUDdeo/PRR4z4MijoixNWSDhAd77&#xa;jR/hztUL7ma6IXEm3XYAcM81HI/Y47YZsXRb+e+wWjUmGselvlDpLm4xsi9nLywR&#xa;DllAS2tnNn/1r8USR1pv19n+It9NF0Cs10s4fBhdNDcYs3nRp2PyFK6A04j3ikVf&#xa;P7ef5YRseQU4R5LhlcBglG34/4pM8Y00SF4Kxy0DcfoJ5liOg2Kk2r+PLfiqHT+8&#xa;1pxRmxrkZeIQMl0DLUr3b7UPAh78tIjtdb8CHweIjG8NLjFJTfeI4V8WXENvJqZJ&#xa;NOZpGZ+eFUFxz/EmKC/Xnz6ESfk+HEqA6IIUNk3VfUuq/JUbG7IZzcr7zWuvjipC&#xa;7Nrw5VwdBD3OBfJEu9w1JuRBO8/gmxnN3zbcyo5Cj1AL8KTUVT+lE+L1qSUF11Se&#xa;FodZLEyyf/rSzj2lJXCKsWh5V7E1sipY73Ym66Drk4Q5yLX5g3mk4uubdyKjScTr&#xa;3Z7wo/uDONOzZR8AMScw2lPzJFwjxQjyK8ic6a5K1JGLkUyuccqMbuzKHHYU89WM&#xa;0VRgWA+bXHAMsQm6vvO6mfFb/cuL8Z2hd2BEV8zUs2VtjI1PUru1K7aBli0JN/t4&#xa;OhxMEe/aWaB9qjcY2jOr+TRItr3It8KYh0LjnP4nhvmWLP9fQ6TaNxbBZOm+TmWE&#xa;ecD9vgI=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49671"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49676"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49715"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="54484"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb2-time" output="&#xa;  date: 2022-12-17T11:24:07&#xa;  start_date: N/A"><elem key="date">2022-12-17T11:24:07</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="nbstat" output="NetBIOS name: WINTERFELL, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:c4:11:ca (Oracle VirtualBox virtual NIC)"/><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script></hostscript><times srtt="188" rttvar="35" to="100000"/>
+</host>
+<host starttime="1671275945" endtime="1671276293"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.56.12" addrtype="ipv4"/>
+<hostnames>
+<hostname name="essos.local" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65513">
+<extrareasons reason="no-response" count="65513" proto="tcp" ports="1-52,54-87,89-134,136-138,140-388,390-444,446-463,465-592,594-635,637-3267,3270-3388,3390-5984,5987-9388,9390-49665,49668,49671,49673-49694,49696-56999,57001-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2022-12-17 11:23:04Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: essos.local, Site: Default-First-Site-Name" hostname="MEEREEN" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" extrainfo="workgroup: ESSOS" hostname="MEEREEN" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: essos.local, Site: Default-First-Site-Name" hostname="MEEREEN" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=meereen.essos.local&#xa;Not valid before: 2022-12-14T12:07:05&#xa;Not valid after:  2023-06-15T12:07:05"><table key="subject">
+<elem key="commonName">meereen.essos.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">meereen.essos.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C8D791DB34851202E64B125EB2287989069201262DA20BB4D08D4A5A36F9D272B829AF3F909689013D1752760047AEE8841C0FAD3D7D8077C4A62132F472E7BA492D1D6BF8FA667ECAD1B02FCD54DCCE84D4E3EC031A7C86E78AA9F261ACF9DA930715483823E3DBF7E6CF5A9D3718BCD69F33769CCFE4B8493F13DAA19A4CA63E02506C2CA2ABEE39A8FB5D32EE4E4E32D79F4D9AE0934E9A529D2C40FA59CF51DC604FC77B8E6F89C753C8944D1A54BC06DF145F8A1B374EAE4F25D139EC521EE27F7116FC763E965404E02F9E9F054D87ABB24BE833A4E93AA72DE64CC97883749C1BF9516DB607EB0CDB80D567E0A1B9DD636CD1648930DD163E3D5A0B87</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T12:07:05</elem>
+<elem key="notAfter">2023-06-15T12:07:05</elem>
+</table>
+<elem key="md5">94cb94114bded4fa0cde9fc5b5180b9f</elem>
+<elem key="sha1">2e29b9e5563b13df91387122ca2517a400ba3c5b</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC6jCCAdKgAwIBAgIQXNf7MrtGQIZLpYePaZcODjANBgkqhkiG9w0BAQsFADAe&#xa;MRwwGgYDVQQDExNtZWVyZWVuLmVzc29zLmxvY2FsMB4XDTIyMTIxNDEyMDcwNVoX&#xa;DTIzMDYxNTEyMDcwNVowHjEcMBoGA1UEAxMTbWVlcmVlbi5lc3Nvcy5sb2NhbDCC&#xa;ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMjXkds0hRIC5ksSXrIoeYkG&#xa;kgEmLaILtNCNSlo2+dJyuCmvP5CWiQE9F1J2AEeu6IQcD609fYB3xKYhMvRy57pJ&#xa;LR1r+PpmfsrRsC/NVNzOhNTj7AMafIbniqnyYaz52pMHFUg4I+Pb9+bPWp03GLzW&#xa;nzN2nM/kuEk/E9qhmkymPgJQbCyiq+45qPtdMu5OTjLXn02a4JNOmlKdLED6Wc9R&#xa;3GBPx3uOb4nHU8iUTRpUvAbfFF+KGzdOrk8l0TnsUh7if3EW/HY+llQE4C+enwVN&#xa;h6uyS+gzpOk6py3mTMl4g3ScG/lRbbYH6wzbgNVn4KG53WNs0WSJMN0WPj1aC4cC&#xa;AwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqG&#xa;SIb3DQEBCwUAA4IBAQARbDmLHi48fuciYCYaXmsb4g0LgxSEvyHb2uBQl+nz27Kt&#xa;9+LE57EUSsPrgb0CSXbPVMHrVQ232FE7tDemkZxbDKOyQQbsCSqBgQ4+IPoMcZ8Q&#xa;0M9FZSQokrJn5VPtmXQq2rILl6ugEJRmxGu6R2BvYKdkTQyzfnEW+rdAUbaOIqr1&#xa;6h1ic42DFVECGU5WSRRAoCBYxiepOWJ8gcggdL78EjUJtU8DlT4HeImk2thR3qSk&#xa;EYKLKkoconihCDM5qVryBCh2gmU6Q9cxi/Nf3vS59roiOauKZ9CExNN3V4sbhx86&#xa;31v1pAaLTZbarC5wYSRcw+H0WCQYSDp3v5oNHoIM&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="5986"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="tls-alpn" output="&#xa;  h2&#xa;  http/1.1"><elem>h2</elem>
+<elem>http/1.1</elem>
+</script><script id="ssl-cert" output="Subject: commonName=VAGRANT&#xa;Subject Alternative Name: DNS:VAGRANT, DNS:vagrant&#xa;Not valid before: 2022-12-14T03:53:15&#xa;Not valid after:  2025-12-13T03:53:15"><table key="subject">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">B6D8894FC100DADE9160232AA5FDCCFFFC3F8FF6450B5053559B087CC2B1F1CDBC4D511F5FAE33BB7CE0762E4082DE2C95C543AF0974320319F737B40566B069596B318EEB75E930D78336F27E8FE6E7EC1B38FFC8EF891A3ACF9B929FE1B8556D69183537063EA5195C38CCE238AF621B0C62158CDAEE953FC571DF51FECC234AAB04B13A704E37652ADEABC5514427A9137BB79B53B66121EA0F4CB7A6B249D852036E90E51B518592A88224DD3570AEFCBCFBAAEBD2B38CD0FB8C5F566113D815179AB2DA61D86EB5BBC9DF3DDF958B11FC80A7474CBF672929EF7D320579C70CB427F259DACA9C16C2D63C10A52E44F3FDD881E3DF8DE977E2AD74DCD87A8834E9DA4A1144EDBB4FD3A612E9BA53D73D29D505F5E9C8998B5E7D8A777AD7BD2F9BF61AFF50F0B11F61BDAB4AFAA1F50A3326561054EF323542CB0974E96B70252B9941033688BD422324A975CDDF1DEAE841D1F6988110229704918AC92840BEB4CD2D34CA3C4093B72E96FB9F0CC662368055C17EA51679A73F69DF100C537BD0BA460C636FBB549520D566345D98D1C0AEC9035F55E827B4480483F4EA08EAE276902990CC2D0DF5FF991D5FF64FABE76107B0A9D6C43F0B1A8C231734488F67C7A0D91A3F091804839C41D0DD2319566604DE62365D08F42CE074FC0AC73076D52B4E04594EE5C088E9CD61E676FAACB1797AE3D52C6E1C43F75BA80D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:VAGRANT, DNS:vagrant</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">75:DD:B9:AA:AC:37:02:A5:AD:87:AB:50:A3:9A:3F:4F:74:28:13:1E</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T03:53:15</elem>
+<elem key="notAfter">2025-12-13T03:53:15</elem>
+</table>
+<elem key="md5">42fe2237a15040ebce8f5bc084f79134</elem>
+<elem key="sha1">463131f638bf0937efa2734c5635234c11705d42</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFETCCAvmgAwIBAgIQGm8X1I+cgIdKVHEwUuTVXTANBgkqhkiG9w0BAQsFADAS&#xa;MRAwDgYDVQQDDAdWQUdSQU5UMB4XDTIyMTIxNDAzNTMxNVoXDTI1MTIxMzAzNTMx&#xa;NVowEjEQMA4GA1UEAwwHVkFHUkFOVDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC&#xa;AgoCggIBALbYiU/BANrekWAjKqX9zP/8P4/2RQtQU1WbCHzCsfHNvE1RH1+uM7t8&#xa;4HYuQILeLJXFQ68JdDIDGfc3tAVmsGlZazGO63XpMNeDNvJ+j+bn7Bs4/8jviRo6&#xa;z5uSn+G4VW1pGDU3Bj6lGVw4zOI4r2IbDGIVjNrulT/Fcd9R/swjSqsEsTpwTjdl&#xa;Kt6rxVFEJ6kTe7ebU7ZhIeoPTLemsknYUgNukOUbUYWSqIIk3TVwrvy8+6rr0rOM&#xa;0PuMX1ZhE9gVF5qy2mHYbrW7yd8935WLEfyAp0dMv2cpKe99MgV5xwy0J/JZ2sqc&#xa;FsLWPBClLkTz/diB49+N6XfirXTc2HqINOnaShFE7btP06YS6bpT1z0p1QX16ciZ&#xa;i159ind6170vm/Ya/1DwsR9hvatK+qH1CjMmVhBU7zI1QssJdOlrcCUrmUEDNoi9&#xa;QiMkqXXN3x3q6EHR9piBECKXBJGKyShAvrTNLTTKPECTty6W+58MxmI2gFXBfqUW&#xa;eac/ad8QDFN70LpGDGNvu1SVINVmNF2Y0cCuyQNfVegntEgEg/TqCOridpApkMwt&#xa;DfX/mR1f9k+r52EHsKnWxD8LGowjFzRIj2fHoNkaPwkYBIOcQdDdIxlWZgTeYjZd&#xa;CPQs4HT8CscwdtUrTgRZTuXAiOnNYeZ2+qyxeXrj1SxuHEP3W6gNAgMBAAGjYzBh&#xa;MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAbBgNVHREEFDAS&#xa;ggdWQUdSQU5Uggd2YWdyYW50MB0GA1UdDgQWBBR13bmqrDcCpa2Hq1Cjmj9PdCgT&#xa;HjANBgkqhkiG9w0BAQsFAAOCAgEArw4J9cY85HdxXiwmLJ6ouRIB/+Ptw0fckVUT&#xa;CPXFTM+9QqKyCNSBqKIAQTjy+Xfk10do5UHERhjrcHGlWjEogU4mi9wFD1KReWic&#xa;wRLfxN3fuFdjUTwI9nWrQpsV4S421LPBe4o8khxQ4Jvw+OTWzkw/qUIQvwO/9GcR&#xa;2oItt+J+SjTsr/ZmnsuKsSUhu2BPJXKoc0uHX/6+jDWQ9KhaFVSw2m5VfE9h87xy&#xa;VwBCiFyp7RdZJVL6lcrHAQ/3omVFypXITE31tm1TT8WSWNRNG5VoAce204Zd8WsG&#xa;y+I8UKMbE4IgAU7DsLZ1GsSByP53BxpqbrEDD/AinPQQYjynAFyv3o6jxoSUuXcw&#xa;plGvS7QvFe/myjGR7fgLPrKFKNWTGCA0rxTecWUUY6WLF4omLIZoe/lwcPqKLf46&#xa;8Zw5W+ekr/PYHlu8IbSvm5Wlp2mPwsZQa58Ypr8U6A1bzdqCGqPw5T9kstBNqnyt&#xa;A5083d3UnUTSNHsY/BLPfpqajEi8D277+gY2EZVBt2Lvx5vBlS/IaMDWM7i5oVXq&#xa;QIFZOXIc0fb87bVo750FuHX5eL0NJoF2QxuhBmOLrp3RZueuXH8Ol8EaGiERYkFQ&#xa;Xtqmz6vPFhMXWBoYe9PZtjA4sMDFA6sYRXVuEyok5q8l7LiQREcIzJJBiSuMPE6B&#xa;BJsABVY=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49672"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49695"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="57000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: MEEREEN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:c1:c4:d9 (Oracle VirtualBox virtual NIC)"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">required</elem>
+</script><script id="ms-sql-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb-os-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb2-time" output="&#xa;  date: 2022-12-17T11:24:12&#xa;  start_date: 2022-12-17T11:15:41"><elem key="date">2022-12-17T11:24:12</elem>
+<elem key="start_date">2022-12-17T11:15:41</elem>
+</script></hostscript><times srtt="156" rttvar="22" to="100000"/>
+</host>
+<host starttime="1671275945" endtime="1671276293"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.56.22" addrtype="ipv4"/>
+<hostnames>
+<hostname name="castelblack.north.sevenkingdoms.local" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65526">
+<extrareasons reason="no-response" count="65526" proto="tcp" ports="1-79,81-134,136-138,140-444,446-1432,1434-3388,3390-5984,5987-49668,49670-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-sql-s" product="Microsoft SQL Server 2019" version="15.00.2000.00; RTM" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2019</cpe></service><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: NORTH&#xa;  NetBIOS_Domain_Name: NORTH&#xa;  NetBIOS_Computer_Name: CASTELBLACK&#xa;  DNS_Domain_Name: north.sevenkingdoms.local&#xa;  DNS_Computer_Name: castelblack.north.sevenkingdoms.local&#xa;  DNS_Tree_Name: sevenkingdoms.local&#xa;  Product_Version: 10.0.17763"><elem key="Target_Name">NORTH</elem>
+<elem key="NetBIOS_Domain_Name">NORTH</elem>
+<elem key="NetBIOS_Computer_Name">CASTELBLACK</elem>
+<elem key="DNS_Domain_Name">north.sevenkingdoms.local</elem>
+<elem key="DNS_Computer_Name">castelblack.north.sevenkingdoms.local</elem>
+<elem key="DNS_Tree_Name">sevenkingdoms.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Not valid before: 2022-12-17T11:16:33&#xa;Not valid after:  2052-12-17T11:16:33"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C5F8E7393A7E97BB873A47D32E0DBE87F7AFC9FC15DC0F82A97E3F805AF2E277E27D7614EA756DF3EDB62311BC5BF06D04EB6118AB73260A0589BCD1F6F2E85D68227D3C063FA0FA406AA0D06F26C9E9900E6AB76599DB4EC78F99EEFE74055C5CDFD5F2973C1BFDE1014E849908A48FD4C9CD618AB0F85D0AA9F1411AE9E70FF51B6A8D96F2329011F91FC458DB39A2C1E222488D1CCBAB7CC3B2806B4EB3CC208B674B4C0062DDEB6915707472BB31296C329D463310F6108FC0101867A3A1D7E7B1ACA28557A395D39C6FD6A5FFB5FEB3E5D5C9D23ADFE2B6B601856842F4132C12FF53D10312CD1C7CB20A28941B2FF6D49E86A46E60562132C830F96011</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-17T11:16:33</elem>
+<elem key="notAfter">2052-12-17T11:16:33</elem>
+</table>
+<elem key="md5">a2938a4074308a3978c4dee48aa3a2d1</elem>
+<elem key="sha1">6148ec358ccf562cc1824d79808bb2adab9c722e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDADCCAeigAwIBAgIQWpzJA5lywqJJVzGDx8E9kDANBgkqhkiG9w0BAQsFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjIxMjE3MTExNjMzWhgPMjA1MjEyMTcxMTE2MzNaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMX45zk6&#xa;fpe7hzpH0y4Nvof3r8n8FdwPgql+P4Ba8uJ34n12FOp1bfPttiMRvFvwbQTrYRir&#xa;cyYKBYm80fby6F1oIn08Bj+g+kBqoNBvJsnpkA5qt2WZ207Hj5nu/nQFXFzf1fKX&#xa;PBv94QFOhJkIpI/Uyc1hirD4XQqp8UEa6ecP9RtqjZbyMpAR+R/EWNs5osHiIkiN&#xa;HMurfMOygGtOs8wgi2dLTABi3etpFXB0crsxKWwynUYzEPYQj8AQGGejodfnsayi&#xa;hVejldOcb9al/7X+s+XVydI63+K2tgGFaEL0EywS/1PRAxLNHHyyCiiUGy/21J6G&#xa;pG5gViEyyDD5YBECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAoZ4GuHK+3QEaEpJ0&#xa;ZUQPa7d0KDu114t011POMtyovwK9OPBkDEQrDKr4O63J/exNMFdYtn3jXdI1Egln&#xa;FBNclQgltukYz3ybQU93BkUh5HlVToM6zGol4FmqiNzK14FU3vr3ojl1d6FfSNHe&#xa;p341FngdS08e3m+JIaDTjZ4mxwlQHIPyGxeRMJaD9Jn0wjQfWQekV1UuuSMi0VN+&#xa;z4j5ebmL/Jmyd/cyV/GBeZZaAYU/SbyS41r/K6WJCAB4dku+VqcckiLxjPJ9L6Es&#xa;bROGgyT5aPxaWD6/Yj4mPgQB32D9xdGRK9xLvsG8aBcGlDGGVaQiVi8Lm/t0upE0&#xa;3X9+Uw==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: NORTH&#xa;  NetBIOS_Domain_Name: NORTH&#xa;  NetBIOS_Computer_Name: CASTELBLACK&#xa;  DNS_Domain_Name: north.sevenkingdoms.local&#xa;  DNS_Computer_Name: castelblack.north.sevenkingdoms.local&#xa;  DNS_Tree_Name: sevenkingdoms.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2022-12-17T11:24:06+00:00"><elem key="Target_Name">NORTH</elem>
+<elem key="NetBIOS_Domain_Name">NORTH</elem>
+<elem key="NetBIOS_Computer_Name">CASTELBLACK</elem>
+<elem key="DNS_Domain_Name">north.sevenkingdoms.local</elem>
+<elem key="DNS_Computer_Name">castelblack.north.sevenkingdoms.local</elem>
+<elem key="DNS_Tree_Name">sevenkingdoms.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2022-12-17T11:24:06+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=castelblack.north.sevenkingdoms.local&#xa;Not valid before: 2022-12-14T12:23:46&#xa;Not valid after:  2023-06-15T12:23:46"><table key="subject">
+<elem key="commonName">castelblack.north.sevenkingdoms.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">castelblack.north.sevenkingdoms.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BAB7FBFC32E57658E9DC716268998C29EE6242384A1F0B6F88AD36AE56952C16598117CD4E27A86B87DED8E8FA735347C0AD89FE78C5F5627321EA30AB5A1EF76C02114906EF18C7A3F413893014ADAB03E9F4BED8D1AAE104DC3D892CF2EBA69B88F3F85415C15653C77912644B07A1E138C1F56F766C31B7C9B7801E4ABB25D5A1CD20FA25779B71C98F176EEF60DD3A6C48658247865ED0047C7E7E7D2C2907B47B01D1DE5A445C1AF1CF6C931FBABC7C012B907BFF163F0BBAD62A3C28E3D046775D57B206942137C713C05AF730D5E269F24A324CAB83D5F99E6C483FEA25E1679E9E1F67221AEE38432419B1EA2F8DA93C890FABD7E664613D78A89FB9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T12:23:46</elem>
+<elem key="notAfter">2023-06-15T12:23:46</elem>
+</table>
+<elem key="md5">9d27527aa09813df3702bb42f800ad95</elem>
+<elem key="sha1">543f433d867e80dd373fd09722f28c04c8186689</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDDjCCAfagAwIBAgIQRxhSXHggNJ5C10oZuouK8jANBgkqhkiG9w0BAQsFADAw&#xa;MS4wLAYDVQQDEyVjYXN0ZWxibGFjay5ub3J0aC5zZXZlbmtpbmdkb21zLmxvY2Fs&#xa;MB4XDTIyMTIxNDEyMjM0NloXDTIzMDYxNTEyMjM0NlowMDEuMCwGA1UEAxMlY2Fz&#xa;dGVsYmxhY2subm9ydGguc2V2ZW5raW5nZG9tcy5sb2NhbDCCASIwDQYJKoZIhvcN&#xa;AQEBBQADggEPADCCAQoCggEBALq3+/wy5XZY6dxxYmiZjCnuYkI4Sh8Lb4itNq5W&#xa;lSwWWYEXzU4nqGuH3tjo+nNTR8Ctif54xfVicyHqMKtaHvdsAhFJBu8Yx6P0E4kw&#xa;FK2rA+n0vtjRquEE3D2JLPLrppuI8/hUFcFWU8d5EmRLB6HhOMH1b3ZsMbfJt4Ae&#xa;Srsl1aHNIPold5txyY8Xbu9g3TpsSGWCR4Ze0AR8fn59LCkHtHsB0d5aRFwa8c9s&#xa;kx+6vHwBK5B7/xY/C7rWKjwo49BGd11XsgaUITfHE8Ba9zDV4mnySjJMq4PV+Z5s&#xa;SD/qJeFnnp4fZyIa7jhDJBmx6i+NqTyJD6vX5mRhPXion7kCAwEAAaMkMCIwEwYD&#xa;VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IB&#xa;AQCn4KTAeqdBOLc/P/4XfOVHckibJjepK96gpE+ZaXSz3ApAFI/zJE7K1vdFxtNo&#xa;XA/KNeoxxb1wxG07cb2s+OVMGGPGu9+717T6rq1RafCVldjluIyqDOyfSnBEPjcn&#xa;79JYmoX4pn5UQUKr/ey/7ZYoHk5N+PWAUdqbtMRpM/LQxl8QKo3whSKAehXTTMxB&#xa;6awXFHdlGYD/UMbIZibl2K4Qbkz0I7UsEdKpOvxGbTLTzwfABKqEpcddYNwczJph&#xa;Znr9Fmifq80W4YkFzSGKHVB3F49P21g4hvGV6ziFFr/2X6nwAGY8aUyXOyOaJqmp&#xa;qOFLX5Qy0IHWBLIpFd9EY+xk&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="5986"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=VAGRANT&#xa;Subject Alternative Name: DNS:VAGRANT, DNS:vagrant&#xa;Not valid before: 2022-12-14T03:55:43&#xa;Not valid after:  2025-12-13T03:55:43"><table key="subject">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">FA1116D01701014E78E80482F9FCCAD42AB7F0898EFF158DE83E95170BC136C2ECAC9664D72E4EB624DD4BC703BDFA472F20D53E8508ECDFA39D3AF78AED85BB014D917B1B9F29C5D8A8A62E0ACD702DBA68E96861A53598F302231002510C9E972FE2AA81EBA0CC713230EB107D60C81D2948033C4572180AC9F457422493269B1701DC1FFA24EBA86DDB350B9AA03542BD0B62BCE99976766AE2A52D733DDE60A117AC96592E1C9995573F1523CDEA3599BC56EB93E4DE8E572CC6FCDD4B8E264DFA821E92E590186C6A21D02E15721350D36CB1133001CF84085E71729F87439C578641EA6F0065B4EE3853134B1346BBBD06377A8F4FC49CD6706CC412D53548BB4F54E46D49C3A0820760A1EE9DF1EDA23C9BBB95339A3C12D0CC33D4814A2797FB9A541A0F2A0D2D84C041B2FA5F36F886337D63FF6892491300C4148E9B204BB0124811EBD339C69B49A99C5207E6FB3681349A12953C8346880915C90895DCBA6C7D088C47F495B4780EE32AC47E40A6DD5641869C80DED87A4E0F58102B539B2AD83FD72A001288D22B4E9662F9ABA9CB6D3384D9E8B46B1360E1175BDCE964F90A61FFFB096D703AC808C7081D5D34F688BC303502A420D92DC41FC91DA71BF1260D11EEC7A542068CBCEDD048ADF45DC40E6849914979D3A1591C7C2FB3F8E1AEF29A4E97457E4C784FD348A4C12A8C303935F0B36751C5A99DF9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:VAGRANT, DNS:vagrant</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">35:E6:75:91:36:2C:D6:22:3D:0E:1F:EC:66:3C:83:B7:29:74:B5:4C</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T03:55:43</elem>
+<elem key="notAfter">2025-12-13T03:55:43</elem>
+</table>
+<elem key="md5">fe6d621529030a601b0943ad17b9b4d8</elem>
+<elem key="sha1">9958a80b30f729209c199999a0d920047d9d8579</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFETCCAvmgAwIBAgIQI6JvfdP/r5REUwpX9Q7EtzANBgkqhkiG9w0BAQsFADAS&#xa;MRAwDgYDVQQDDAdWQUdSQU5UMB4XDTIyMTIxNDAzNTU0M1oXDTI1MTIxMzAzNTU0&#xa;M1owEjEQMA4GA1UEAwwHVkFHUkFOVDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC&#xa;AgoCggIBAPoRFtAXAQFOeOgEgvn8ytQqt/CJjv8Vjeg+lRcLwTbC7KyWZNcuTrYk&#xa;3UvHA736Ry8g1T6FCOzfo50694rthbsBTZF7G58pxdiopi4KzXAtumjpaGGlNZjz&#xa;AiMQAlEMnpcv4qqB66DMcTIw6xB9YMgdKUgDPEVyGArJ9FdCJJMmmxcB3B/6JOuo&#xa;bds1C5qgNUK9C2K86Zl2dmripS1zPd5goResllkuHJmVVz8VI83qNZm8VuuT5N6O&#xa;VyzG/N1LjiZN+oIekuWQGGxqIdAuFXITUNNssRMwAc+ECF5xcp+HQ5xXhkHqbwBl&#xa;tO44UxNLE0a7vQY3eo9PxJzWcGzEEtU1SLtPVORtScOgggdgoe6d8e2iPJu7lTOa&#xa;PBLQzDPUgUonl/uaVBoPKg0thMBBsvpfNviGM31j/2iSSRMAxBSOmyBLsBJIEevT&#xa;OcabSamcUgfm+zaBNJoSlTyDRogJFckIldy6bH0IjEf0lbR4DuMqxH5Apt1WQYac&#xa;gN7Yek4PWBArU5sq2D/XKgASiNIrTpZi+aupy20zhNnotGsTYOEXW9zpZPkKYf/7&#xa;CW1wOsgIxwgdXTT2iLwwNQKkINktxB/JHacb8SYNEe7HpUIGjLzt0Eit9F3EDmhJ&#xa;kUl506FZHHwvs/jhrvKaTpdFfkx4T9NIpMEqjDA5NfCzZ1HFqZ35AgMBAAGjYzBh&#xa;MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAbBgNVHREEFDAS&#xa;ggdWQUdSQU5Uggd2YWdyYW50MB0GA1UdDgQWBBQ15nWRNizWIj0OH+xmPIO3KXS1&#xa;TDANBgkqhkiG9w0BAQsFAAOCAgEANBStvc1hA7Bp9A0f4YIcpWAHXh1BRNkXcHwh&#xa;ZEIZtteNbfr2WEv2RBxLAJBL0dScEyn7pNjsUEeVeJYMJvfcHjIxYPXkpRAqHNGw&#xa;JfozGaatr09WuE68MowYrKvD2v6CU2uEtL1dJ9XQTZM1BClEn1yP0SwlNlX7gJY5&#xa;kVHjhCkLdfY2UvRp4T0w6G5zI4My3ujcZFlNQs5tRrHMOwrSGr4KGnOhJ4J+5q6L&#xa;a1l0674akrJl5qZQjmI4bJSVUK9dR5/AILTNBA766BxYwmsHixL7crsVmjembOsW&#xa;vBnxIv1rozHaj6lHA6jPJx69ntDhe6wJ9a+PFmTXfUtPJY01Q7Tmgk5MSXrqMWEz&#xa;DXBx2eBTomjSpFCG37X+jeQl7Oz19gGKTsS4WZoWhXxbXb+L8I9gCR/QE2ufMKaX&#xa;mEvMza6wrZVGQSKcy5lnkx0Fdeh4j+dQ6KV1W7BtWZDQmkZXwaAPYd3j9/r/nViP&#xa;va9binhgA5HUtO4ojBW5KQqQlYsgubScc/ZKsg9iMBijHZR+xabR7xNRChdEhcGl&#xa;lDsiHAAY3ienNfbtyp0zgtXanwGc2sCFH+Qd4GSliB7Fxdxgw8WqOklekz4a4Z52&#xa;schvmKWs8pQF6/LDzSIbJnoed4/xiVMbpfi4SzuKW4+XozxqnQ5mkL+VzLONiykK&#xa;TF/5mNI=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb2-time" output="&#xa;  date: 2022-12-17T11:24:07&#xa;  start_date: N/A"><elem key="date">2022-12-17T11:24:07</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="ms-sql-info" output="&#xa;  192.168.56.22:1433: &#xa;    Version: &#xa;      name: Microsoft SQL Server 2019 RTM&#xa;      number: 15.00.2000.00&#xa;      Product: Microsoft SQL Server 2019&#xa;      Service pack level: RTM&#xa;      Post-SP patches applied: false&#xa;    TCP port: 1433"><table key="192.168.56.22:1433">
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2019 RTM</elem>
+<elem key="number">15.00.2000.00</elem>
+<elem key="Product">Microsoft SQL Server 2019</elem>
+<elem key="Service pack level">RTM</elem>
+<elem key="Post-SP patches applied">false</elem>
+</table>
+<elem key="TCP port">1433</elem>
+</table>
+</script><script id="nbstat" output="NetBIOS name: CASTELBLACK, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:d8:4c:c4 (Oracle VirtualBox virtual NIC)"/><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script></hostscript><times srtt="197" rttvar="17" to="100000"/>
+</host>
+<host starttime="1671275945" endtime="1671276293"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.56.23" addrtype="ipv4"/>
+<hostnames>
+<hostname name="braavos.essos.local" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65524">
+<extrareasons reason="no-response" count="65524" proto="tcp" ports="1-79,81-134,136-138,140-444,446-1432,1434-3388,3390-5984,5987-49666,49669-49670,49672-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-sql-s" product="Microsoft SQL Server 2019" version="15.00.2000.00; RTM" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2019</cpe></service><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Not valid before: 2022-12-17T11:16:57&#xa;Not valid after:  2052-12-17T11:16:57"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">D5BDDDF9D1FE09CAF33F4C4F0F3038E49C732CDB7ACE08E05A81E0DA5B3A0026E856F1C007D9CABAA46616A40B9722AC66954F9FEAB69BA366032994E2CC2173F48D2B019F4577C16AB47874A9177F23F2ECAB00F59AE1A0511AD572FFE8D551D6B96CE29E1A0301BC7DE37D4A1810DA0162C3671EB79551125B9E28B592D6B14D0C031E42F0F975CF7DCD13FFD305C2BF4D9AD20CD88957DA96CB2CE41BBC18D7C1D3C61F29B2C8CB72A0C9C0FAEFA426324BF6624751982AC75BE86E47E5D98A80D88DCC280294A82B4608D40638C9243819EE898E352CAB53AA603EC93FF558B6FF369079F836FC7EFA3E9DA3D7A10279AF731F981FF6495BE6E912473C81</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-17T11:16:57</elem>
+<elem key="notAfter">2052-12-17T11:16:57</elem>
+</table>
+<elem key="md5">039d8388f3ce408ee27cd123000c19ee</elem>
+<elem key="sha1">cce688c821200093850065f296e8a9f438b1ad95</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDADCCAeigAwIBAgIQYt8I5V1HUYBB1RfWWWrMcDANBgkqhkiG9w0BAQsFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjIxMjE3MTExNjU3WhgPMjA1MjEyMTcxMTE2NTdaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANW93fnR&#xa;/gnK8z9MTw8wOOSccyzbes4I4FqB4NpbOgAm6FbxwAfZyrqkZhakC5cirGaVT5/q&#xa;tpujZgMplOLMIXP0jSsBn0V3wWq0eHSpF38j8uyrAPWa4aBRGtVy/+jVUda5bOKe&#xa;GgMBvH3jfUoYENoBYsNnHreVURJbnii1ktaxTQwDHkLw+XXPfc0T/9MFwr9NmtIM&#xa;2IlX2pbLLOQbvBjXwdPGHymyyMtyoMnA+u+kJjJL9mJHUZgqx1vobkfl2YqA2I3M&#xa;KAKUqCtGCNQGOMkkOBnuiY41LKtTqmA+yT/1WLb/NpB5+Db8fvo+naPXoQJ5r3Mf&#xa;mB/2SVvm6RJHPIECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAUs/zllbL5JQRGB6j&#xa;o5wdJ5MQy03fqUi5Yt4kYRKdHrlXGZ3+PIGpFYBogqNF/qwMHEtRw/psNAg/hTC+&#xa;50LyURWqaIdyZ62hJwf74ZBMpfr69daX+D+Rhcb3TGWtCJRq4KMoFCMgsEsT2e8G&#xa;72kpgu7EAmhqrSTf4eYsLZG+lMCMNgAp5pLLMiCB+5m8vNhToBeHtTKNSlk4GElW&#xa;F1HdoDyvoj58FWXlEYYS4cK//egpEvw8psja1n0MXT73oQVBL49hVPFk5PYK5Nzp&#xa;l4KxCCpgen/NQGY7BW4bAdAAgnfx8gn0SQnwc73iD9fCdOE1cTb/DdZnF87mReh1&#xa;z39UHw==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: ESSOS&#xa;  NetBIOS_Domain_Name: ESSOS&#xa;  NetBIOS_Computer_Name: BRAAVOS&#xa;  DNS_Domain_Name: essos.local&#xa;  DNS_Computer_Name: braavos.essos.local&#xa;  DNS_Tree_Name: essos.local&#xa;  Product_Version: 10.0.14393"><elem key="Target_Name">ESSOS</elem>
+<elem key="NetBIOS_Domain_Name">ESSOS</elem>
+<elem key="NetBIOS_Computer_Name">BRAAVOS</elem>
+<elem key="DNS_Domain_Name">essos.local</elem>
+<elem key="DNS_Computer_Name">braavos.essos.local</elem>
+<elem key="DNS_Tree_Name">essos.local</elem>
+<elem key="Product_Version">10.0.14393</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=braavos.essos.local&#xa;Not valid before: 2022-12-14T12:23:45&#xa;Not valid after:  2023-06-15T12:23:45"><table key="subject">
+<elem key="commonName">braavos.essos.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">braavos.essos.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CF13D15C5D50390282D06CE379A17F61C0D00C5CC4EF63CD33AF85A102DCDB54EBAA479C6DA16B13BD25D6B3F71C8E2575497D0FB8553679EA3846B35916C403C82228E5C67DA4E1092F182DB2AB3DDEE1F3A971F8E84F4F1882FC3015397E8682FE6215788AEF5F55604E7B0188C40DA444554AD6AE138328490A63A2F3DD8BF5FA1C76F50BF067CB2637D83C030A18622B8772A975D59F42CDA2F0FD9EC2D5CF07E26E57E03E20251626B627DDD1A43F8439E676FF94D7BDEEDF0E2F9655635BC0661D6E3E930DE22F9F27A4F449555CF66B6F23CCFB79396BEB9570CF1C3F934EC447A1F2696140F47D7D729B157920B95678E1DA6D541DC2AB51A0D1CBDF</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T12:23:45</elem>
+<elem key="notAfter">2023-06-15T12:23:45</elem>
+</table>
+<elem key="md5">5a98aab477cc76612d54bbc1edd6d0a1</elem>
+<elem key="sha1">a163a139506bdd87179dd168369f5bf54af66a64</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC6jCCAdKgAwIBAgIQcX3yBADeBaJKuHM+GjZY0jANBgkqhkiG9w0BAQsFADAe&#xa;MRwwGgYDVQQDExNicmFhdm9zLmVzc29zLmxvY2FsMB4XDTIyMTIxNDEyMjM0NVoX&#xa;DTIzMDYxNTEyMjM0NVowHjEcMBoGA1UEAxMTYnJhYXZvcy5lc3Nvcy5sb2NhbDCC&#xa;ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM8T0VxdUDkCgtBs43mhf2HA&#xa;0AxcxO9jzTOvhaEC3NtU66pHnG2haxO9Jdaz9xyOJXVJfQ+4VTZ56jhGs1kWxAPI&#xa;Iijlxn2k4QkvGC2yqz3e4fOpcfjoT08YgvwwFTl+hoL+YhV4iu9fVWBOewGIxA2k&#xa;RFVK1q4TgyhJCmOi892L9focdvUL8GfLJjfYPAMKGGIrh3KpddWfQs2i8P2ewtXP&#xa;B+JuV+A+ICUWJrYn3dGkP4Q55nb/lNe97t8OL5ZVY1vAZh1uPpMN4i+fJ6T0SVVc&#xa;9mtvI8z7eTlr65Vwzxw/k07ER6HyaWFA9H19cpsVeSC5Vnjh2m1UHcKrUaDRy98C&#xa;AwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqG&#xa;SIb3DQEBCwUAA4IBAQCl9I939K5X5scCqzohxjVIDBr0/nWu1KjchHn9gWRDgFIr&#xa;oI47LRQ3f1kCvBlWiL3ZvjowoP6x8nVzVMjR+IrgK5w1VqPKR3+mhV/0WqcGZBuM&#xa;Mt+OK/oqwsXEak7vlyWZEnIQ6IcvjvMpMqICan36DcFeQwJj1aWEAT4eUPe+uOga&#xa;g+O28ZE9UIT0vIWJFt41wiq85DyizRbfQCXP4TH4F4tqpOBlzYH4qmETtndmEKMa&#xa;Rt2trFY7wTqq+lkRjBckxl7cpt2YjtDmH+Ygk9P/ZZyo1IA6p0ZE+7QC+IiQZURf&#xa;LIqUwNAi8QtxR+9gw4u5swOXTuYH49RWFEQkMFP5&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="5986"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="tls-alpn" output="&#xa;  h2&#xa;  http/1.1"><elem>h2</elem>
+<elem>http/1.1</elem>
+</script><script id="ssl-date" output="2022-12-17T11:24:53+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2022-12-17T11:24:53+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=VAGRANT&#xa;Subject Alternative Name: DNS:VAGRANT, DNS:vagrant&#xa;Not valid before: 2022-12-14T03:58:06&#xa;Not valid after:  2025-12-13T03:58:06"><table key="subject">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">VAGRANT</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">BC2B769CEBEB29C5DED31F04AC89B202022E06F29DC885785404E83D69085AF72BE65D542B5BC04A2013B9712774A85565BBE67C58AD243600741EB2A33D913D01FB6289310AF798CB8CD19E6E714AF974625FA79027FC2572FDBE503FCD16E66F57AF1F54E631B6BF4FF3A041627B3E699210EA0408ADAE369A9CEC4A201C2C6D0335B506796689C21A22B7469BBD9FC55A67EFC13A78724AFBA47F77366616B1F89DDD88DC3C3F6DCB4EA9C26FEC78E240833C2D6DD3A982AD7EC131582F1DB4A0580692534E16BDC4FCD7F6B3C52A36F31F8FAFD081C6E62629619DBD4419F81D5D21B33EAF65A9380C909FC5B310A4A4B63B9AA74E717FE27252AA4E935AB520918F095A134ECAAE5E88DA1A40D7BB0C4945C44321423C9ECF9AEEE3D396270A387503AB896F790EA3662CB87EAEB3FE7FC004438A9583844A984EE1137194FB910A7F8D2CF4A03D847BEF69A074373B3DCD22B190F47B5D7613E39CFBFCD7D696A8FE2038471F3C5EA35B445C4E2824F9CBB10060539E4D0B6980B68293B7A5D946C2788A08F21DAD720165C1E723635EADD1EF687400A1E7D0C6D8A7A82355D0A0D4EB99B3A2E5057560DD173B2E52958716DE137E0451C150D563CC6E802436D529455EA4666A2D654D10167A114501A66ED5C64E7A91739B70EF7ABB679B9DEDB287CC9C460AFFDF4BF2EB5E6B8697B2EBD27E3A20A5F10FF272D50D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:VAGRANT, DNS:vagrant</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">D3:48:93:A5:6D:D6:D6:96:84:01:75:7C:58:EA:E2:1E:40:45:6D:8E</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-12-14T03:58:06</elem>
+<elem key="notAfter">2025-12-13T03:58:06</elem>
+</table>
+<elem key="md5">2103168b2b9271642edacfbfcc882a3b</elem>
+<elem key="sha1">effad225e33ce5db6751ebb03f24ad038cfe4767</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFETCCAvmgAwIBAgIQPxzaEYW94o9ED6G7SXgbJzANBgkqhkiG9w0BAQsFADAS&#xa;MRAwDgYDVQQDDAdWQUdSQU5UMB4XDTIyMTIxNDAzNTgwNloXDTI1MTIxMzAzNTgw&#xa;NlowEjEQMA4GA1UEAwwHVkFHUkFOVDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC&#xa;AgoCggIBALwrdpzr6ynF3tMfBKyJsgICLgbynciFeFQE6D1pCFr3K+ZdVCtbwEog&#xa;E7lxJ3SoVWW75nxYrSQ2AHQesqM9kT0B+2KJMQr3mMuM0Z5ucUr5dGJfp5An/CVy&#xa;/b5QP80W5m9Xrx9U5jG2v0/zoEFiez5pkhDqBAitrjaanOxKIBwsbQM1tQZ5ZonC&#xa;GiK3Rpu9n8VaZ+/BOnhySvukf3c2Zhax+J3diNw8P23LTqnCb+x44kCDPC1t06mC&#xa;rX7BMVgvHbSgWAaSU04WvcT81/azxSo28x+Pr9CBxuYmKWGdvUQZ+B1dIbM+r2Wp&#xa;OAyQn8WzEKSktjuap05xf+JyUqpOk1q1IJGPCVoTTsquXojaGkDXuwxJRcRDIUI8&#xa;ns+a7uPTlicKOHUDq4lveQ6jZiy4fq6z/n/ABEOKlYOESphO4RNxlPuRCn+NLPSg&#xa;PYR772mgdDc7Pc0isZD0e112E+Oc+/zX1pao/iA4Rx88XqNbRFxOKCT5y7EAYFOe&#xa;TQtpgLaCk7el2UbCeIoI8h2tcgFlwecjY16t0e9odACh59DG2KeoI1XQoNTrmbOi&#xa;5QV1YN0XOy5SlYcW3hN+BFHBUNVjzG6AJDbVKUVepGZqLWVNEBZ6EUUBpm7Vxk56&#xa;kXObcO96u2ebne2yh8ycRgr/30vy615rhpey69J+OiCl8Q/yctUNAgMBAAGjYzBh&#xa;MA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAbBgNVHREEFDAS&#xa;ggdWQUdSQU5Uggd2YWdyYW50MB0GA1UdDgQWBBTTSJOlbdbWloQBdXxY6uIeQEVt&#xa;jjANBgkqhkiG9w0BAQsFAAOCAgEAQCfTp7DNhFl7+wgAmb4Hzzb72BgYb241VV0q&#xa;iRPhL/u+AkvYNj9bH/FCK2L9etMtfTAJg7hMm5XRXHFj9LZjAW2Sl+qg3aoDVV3j&#xa;V6uQMNeBVCV+wvR9nYXmDaLb1skWj6f2pypo9cPjeDv5Lfm52kG4Ugt+GlFCXmD6&#xa;MZXHWusSZQAWPdcwNGQJwEomRtG2UDrgJ6FRfVSa3lNO3L6j/Usr3b4uPsbSR0AH&#xa;S87lFZZdr3BVBGYt8YUCcZQJv+FYBL6SKCt9dVQcuCtWrY+wBJYjj7ZIPLW48j3n&#xa;GCCbZ3I0e/z75AaY8XtB5SvDDFPnYMfRCGKTB/6Tdq66Wa2vYps2/MdIfftPs82l&#xa;zWEcYZNYqhDDmI6QBoZHLJCemsDv7a3wAJvy8E0aE4J3SZOdgTp1Jp/LGQu7BE7q&#xa;h8YXB4A/I79uyHilpP47yuUuse06wOUqeARAu9MiGDm+V5bdUOzqyimB4+xlIbG2&#xa;z3FLUrEmUFtKQZ2WWVC1kgczZz4nSvapmnMNKUZkq2MDkUZg7Jlz3f25DQblBzjP&#xa;VjikyIws+B7wymsEqznp6mLL7KUxaGVwT3nYOfWB7ZZQeiOYICX+xsUp8aKLw/lo&#xa;Kp3TH2NDD9aGl/3WEt8PDxUZ1TRF7TxdNriu4aXJvyUaZdBhodBdpdGb8HI+gTTT&#xa;H3lOJWo=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49671"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="ms-sql-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="nbstat" output="NetBIOS name: BRAAVOS, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:cc:54:97 (Oracle VirtualBox virtual NIC)"/><script id="smb-os-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-12-17T11:24:09&#xa;  start_date: 2022-12-17T11:16:53"><elem key="date">2022-12-17T11:24:09</elem>
+<elem key="start_date">2022-12-17T11:16:53</elem>
+</script></hostscript><times srtt="159" rttvar="15" to="100000"/>
+</host>
+<postscript><script id="clock-skew" output="&#xa;  0s: &#xa;    192.168.56.11 (winterfell.north.sevenkingdoms.local)&#xa;    192.168.56.22 (castelblack.north.sevenkingdoms.local)&#xa;    192.168.56.23 (braavos.essos.local)&#xa;    192.168.56.10 (sevenkingdoms.local)&#xa;    192.168.56.12 (essos.local)"><table key="0s">
+<elem>192.168.56.11 (winterfell.north.sevenkingdoms.local)</elem>
+<elem>192.168.56.22 (castelblack.north.sevenkingdoms.local)</elem>
+<elem>192.168.56.23 (braavos.essos.local)</elem>
+<elem>192.168.56.10 (sevenkingdoms.local)</elem>
+<elem>192.168.56.12 (essos.local)</elem>
+</table>
+</script></postscript><runstats><finished time="1671276293" timestr="Sat Dec 17 12:24:53 2022" summary="Nmap done at Sat Dec 17 12:24:53 2022; 5 IP addresses (5 hosts up) scanned in 348.12 seconds" elapsed="348.12" exit="success"/><hosts up="5" down="0" total="5"/>
+</runstats>
+</nmaprun>
