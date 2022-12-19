@@ -6,7 +6,7 @@
 
 Lets start doing some
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled.png)
+![Untitled](/assets/images/Untitled.png)
 
 ### Crackmapexec
 
@@ -14,7 +14,7 @@ Lets start doing some
 crackmapexec smb 192.168.56.1/24
 ```
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%201.png)
+![Untitled](/assets/images/Untitled%201.png)
 
 - north.sevenkingdoms.local
     - WINTERFELL → **192.168.56.11**
@@ -44,7 +44,7 @@ crackmapexec smb 192.168.56.1/24
                 - Maybe vuln to NTLM Relay
         - (SMBv1:True)
     
-    ![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%202.png)
+    ![Untitled](/assets/images/Untitled%202.png)
     
 
 ### NMAP
@@ -53,15 +53,15 @@ crackmapexec smb 192.168.56.1/24
 sudo nmap -Pn -sV --top-ports 50 --open -iL init_IPs.txt
 ```
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%203.png)
+![Untitled](/assets/images/Untitled%203.png)
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%204.png)
+![Untitled](/assets/images/Untitled%204.png)
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%205.png)
+![Untitled](/assets/images/Untitled%205.png)
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%206.png)
+![Untitled](/assets/images/Untitled%206.png)
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%207.png)
+![Untitled](/assets/images/Untitled%207.png)
 
 ```powershell
 nmap -Pn -p- -sC -sV -oA full_scan_goad 192.168.56.10-12,22-23 -T4 --min-rate 2000
@@ -69,9 +69,9 @@ nmap -Pn -p- -sC -sV -oA full_scan_goad 192.168.56.10-12,22-23 -T4 --min-rate 20
 		-> Carefull with -T4 & --min-rate options, on a REAL assesment are very very noisy
 ```
 
-[full_scan_goad.xml](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/full_scan_goad.xml)
+[full_scan_goad.xml](/assets/files/full_scan_goad.xml)
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%208.png)
+![Untitled](/assets/images/Untitled%208.png)
 
 ### DNS
 
@@ -83,15 +83,15 @@ nslookup -type=srv _ldap._tcp.dc._msdcs.<DOMAIN> <IP>
 
 - 192.168.56.10
     
-    ![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%209.png)
+    ![Untitled](/assets/images/Untitled%209.png)
     
 - 192.168.56.12
     
-    ![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2010.png)
+    ![Untitled](/assets/images/Untitled%2010.png)
     
 - 192.168.56.11
     
-    ![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2011.png)
+    ![Untitled](/assets/images/Untitled%2011.png)
     
     New IP Found —> ***10.0.2.15***
     
@@ -183,7 +183,7 @@ snip
 
 Crackmapexec.cmedb command
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2012.png)
+![Untitled](/assets/images/Untitled%2012.png)
 
 ### Anonymous User Enum
 
@@ -250,7 +250,7 @@ I found some Shares with ***Read,Write*** Permission.
 crackmapexec.cme smb 192.168.56.10-23 -u 'a' -p '' --shares
 ```
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2013.png)
+![Untitled](/assets/images/Untitled%2013.png)
 
 Another way
 
@@ -258,9 +258,9 @@ Another way
 smbclient -L \\<domain name> -I <target IP> -N
 ```
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2014.png)
+![Untitled](/assets/images/Untitled%2014.png)
 
-![Untitled](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2015.png)
+![Untitled](/assets/images/Untitled%2015.png)
 
 # Initial Access
 
@@ -270,7 +270,7 @@ smbclient -L \\<domain name> -I <target IP> -N
 
 Im using the tool [`Arsenal`](https://github.com/Orange-Cyberdefense/arsenal) from **Orange Ciberdefense** to makes easier to understand the command.
 
-![GetNPUsers its a tool from impacket to find AS-REP Roastable Users on a Domain.](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2016.png)
+![GetNPUsers its a tool from impacket to find AS-REP Roastable Users on a Domain.](/assets/images/Untitled%2016.png)
 
 GetNPUsers its a tool from impacket to find AS-REP Roastable Users on a Domain.
 
@@ -278,7 +278,7 @@ GetNPUsers its a tool from impacket to find AS-REP Roastable Users on a Domain.
     - DC02 - WINTERFELL
         - north.sevenkingdoms.local
 
-![We found a hash that has been the session key encrypted with the hash of the user's password](GOAD%20V2%20b2bb3767a8134170a34c941879d9ed38/Untitled%2017.png)
+![We found a hash that has been the session key encrypted with the hash of the user's password](/assets/images/Untitled%2017.png)
 
 We found a hash that has been the session key encrypted with the hash of the user's password
 
