@@ -1,5 +1,5 @@
 # GOAD_v2_WriteUp_by_Helix
-Personal resolution of the GOAD environment combining traditional tools with the use of CobaltStrike.
+Personal resolution of the GOAD environment combining traditional tools and CobaltStrike framework.
 
 ## Special Thanks
 Thanks to Mayfly for the creation of this repository which is in charge of deploying the environment to you.
