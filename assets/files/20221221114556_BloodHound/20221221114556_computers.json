@@ -1,0 +1,307 @@
+﻿{
+  "data": [
+    {
+      "Properties": {
+        "domain": "NORTH.SEVENKINGDOMS.LOCAL",
+        "name": "WINTERFELL.NORTH.SEVENKINGDOMS.LOCAL",
+        "distinguishedname": "CN=WINTERFELL,OU=DOMAIN CONTROLLERS,DC=NORTH,DC=SEVENKINGDOMS,DC=LOCAL",
+        "domainsid": "S-1-5-21-566060928-2936574977-4293486541",
+        "highvalue": false,
+        "samaccountname": "WINTERFELL$",
+        "haslaps": false,
+        "description": null,
+        "whencreated": 1671363375,
+        "enabled": true,
+        "unconstraineddelegation": true,
+        "trustedtoauth": false,
+        "lastlogon": 1671616076,
+        "lastlogontimestamp": 1671363418,
+        "pwdlastset": 1671363401,
+        "serviceprincipalnames": [
+          "ldap/winterfell.north.sevenkingdoms.local/DomainDnsZones.north.sevenkingdoms.local",
+          "ldap/winterfell.north.sevenkingdoms.local/ForestDnsZones.sevenkingdoms.local",
+          "Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/winterfell.north.sevenkingdoms.local",
+          "TERMSRV/WINTERFELL",
+          "TERMSRV/winterfell.north.sevenkingdoms.local",
+          "DNS/winterfell.north.sevenkingdoms.local",
+          "GC/winterfell.north.sevenkingdoms.local/sevenkingdoms.local",
+          "RestrictedKrbHost/winterfell.north.sevenkingdoms.local",
+          "RestrictedKrbHost/WINTERFELL",
+          "RPC/9c0015a3-d582-4727-808f-977714820693._msdcs.sevenkingdoms.local",
+          "HOST/WINTERFELL/NORTH",
+          "HOST/winterfell.north.sevenkingdoms.local/NORTH",
+          "HOST/WINTERFELL",
+          "HOST/winterfell.north.sevenkingdoms.local",
+          "HOST/winterfell.north.sevenkingdoms.local/north.sevenkingdoms.local",
+          "E3514235-4B06-11D1-AB04-00C04FC2DCD2/9c0015a3-d582-4727-808f-977714820693/north.sevenkingdoms.local",
+          "ldap/WINTERFELL/NORTH",
+          "ldap/9c0015a3-d582-4727-808f-977714820693._msdcs.sevenkingdoms.local",
+          "ldap/winterfell.north.sevenkingdoms.local/NORTH",
+          "ldap/WINTERFELL",
+          "ldap/winterfell.north.sevenkingdoms.local",
+          "ldap/winterfell.north.sevenkingdoms.local/north.sevenkingdoms.local"
+        ],
+        "operatingsystem": "Windows Server 2019 Datacenter Evaluation",
+        "sidhistory": []
+      },
+      "PrimaryGroupSID": "S-1-5-21-566060928-2936574977-4293486541-516",
+      "AllowedToDelegate": [],
+      "AllowedToAct": [],
+      "HasSIDHistory": [],
+      "Sessions": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "ERROR_ACCESS_DENIED"
+      },
+      "PrivilegedSessions": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "ERROR_ACCESS_DENIED"
+      },
+      "RegistrySessions": {
+        "Results": [],
+        "Collected": true,
+        "FailureReason": null
+      },
+      "LocalAdmins": {
+        "Results": [
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-500",
+            "ObjectType": "User"
+          },
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1000",
+            "ObjectType": "User"
+          },
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-512",
+            "ObjectType": "Group"
+          },
+          {
+            "ObjectIdentifier": "S-1-5-21-3262959479-855567469-2661024141-519",
+            "ObjectType": "Base"
+          },
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1111",
+            "ObjectType": "User"
+          },
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1112",
+            "ObjectType": "User"
+          },
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1113",
+            "ObjectType": "User"
+          }
+        ],
+        "Collected": true,
+        "FailureReason": null
+      },
+      "RemoteDesktopUsers": {
+        "Results": [
+          {
+            "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1106",
+            "ObjectType": "Group"
+          }
+        ],
+        "Collected": true,
+        "FailureReason": null
+      },
+      "DcomUsers": { "Results": [], "Collected": true, "FailureReason": null },
+      "PSRemoteUsers": {
+        "Results": [],
+        "Collected": true,
+        "FailureReason": null
+      },
+      "Status": null,
+      "Aces": [
+        {
+          "PrincipalSID": "S-1-5-21-566060928-2936574977-4293486541-512",
+          "PrincipalType": "Group",
+          "RightName": "Owns",
+          "IsInherited": false
+        },
+        {
+          "PrincipalSID": "S-1-5-21-566060928-2936574977-4293486541-512",
+          "PrincipalType": "Group",
+          "RightName": "GenericAll",
+          "IsInherited": false
+        },
+        {
+          "PrincipalSID": "S-1-5-21-3262959479-855567469-2661024141-527",
+          "PrincipalType": "Base",
+          "RightName": "AddKeyCredentialLink",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "S-1-5-21-566060928-2936574977-4293486541-526",
+          "PrincipalType": "Group",
+          "RightName": "AddKeyCredentialLink",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "S-1-5-21-3262959479-855567469-2661024141-519",
+          "PrincipalType": "Base",
+          "RightName": "GenericAll",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-544",
+          "PrincipalType": "Group",
+          "RightName": "WriteDacl",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-544",
+          "PrincipalType": "Group",
+          "RightName": "WriteOwner",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-544",
+          "PrincipalType": "Group",
+          "RightName": "GenericWrite",
+          "IsInherited": true
+        }
+      ],
+      "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1001",
+      "IsDeleted": false,
+      "IsACLProtected": false
+    },
+    {
+      "Properties": {
+        "domain": "NORTH.SEVENKINGDOMS.LOCAL",
+        "name": "CASTELBLACK.NORTH.SEVENKINGDOMS.LOCAL",
+        "distinguishedname": "CN=CASTELBLACK,CN=COMPUTERS,DC=NORTH,DC=SEVENKINGDOMS,DC=LOCAL",
+        "domainsid": "S-1-5-21-566060928-2936574977-4293486541",
+        "highvalue": false,
+        "samaccountname": "CASTELBLACK$",
+        "haslaps": false,
+        "description": null,
+        "whencreated": 1671363801,
+        "enabled": true,
+        "unconstraineddelegation": false,
+        "trustedtoauth": false,
+        "lastlogon": 1671623047,
+        "lastlogontimestamp": 1671363801,
+        "pwdlastset": 1671363801,
+        "serviceprincipalnames": [
+          "HTTP/winterfell.north.sevenkingdoms.local",
+          "TERMSRV/CASTELBLACK",
+          "TERMSRV/castelblack.north.sevenkingdoms.local",
+          "RestrictedKrbHost/CASTELBLACK",
+          "HOST/CASTELBLACK",
+          "RestrictedKrbHost/castelblack.north.sevenkingdoms.local",
+          "HOST/castelblack.north.sevenkingdoms.local"
+        ],
+        "operatingsystem": "Windows Server 2019 Datacenter Evaluation",
+        "sidhistory": []
+      },
+      "PrimaryGroupSID": "S-1-5-21-566060928-2936574977-4293486541-515",
+      "AllowedToDelegate": [],
+      "AllowedToAct": [],
+      "HasSIDHistory": [],
+      "Sessions": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "ERROR_ACCESS_DENIED"
+      },
+      "PrivilegedSessions": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "ERROR_ACCESS_DENIED"
+      },
+      "RegistrySessions": {
+        "Results": [
+          {
+            "UserSID": "S-1-5-21-566060928-2936574977-4293486541-1121",
+            "ComputerSID": "S-1-5-21-566060928-2936574977-4293486541-1104"
+          }
+        ],
+        "Collected": true,
+        "FailureReason": null
+      },
+      "LocalAdmins": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "SAMRPCServerInit Failed"
+      },
+      "RemoteDesktopUsers": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "SAMRPCServerInit Failed"
+      },
+      "DcomUsers": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "SAMRPCServerInit Failed"
+      },
+      "PSRemoteUsers": {
+        "Results": [],
+        "Collected": false,
+        "FailureReason": "SAMRPCServerInit Failed"
+      },
+      "Status": null,
+      "Aces": [
+        {
+          "PrincipalSID": "S-1-5-21-566060928-2936574977-4293486541-512",
+          "PrincipalType": "Group",
+          "RightName": "Owns",
+          "IsInherited": false
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-548",
+          "PrincipalType": "Group",
+          "RightName": "GenericAll",
+          "IsInherited": false
+        },
+        {
+          "PrincipalSID": "S-1-5-21-566060928-2936574977-4293486541-512",
+          "PrincipalType": "Group",
+          "RightName": "GenericAll",
+          "IsInherited": false
+        },
+        {
+          "PrincipalSID": "S-1-5-21-3262959479-855567469-2661024141-527",
+          "PrincipalType": "Base",
+          "RightName": "AddKeyCredentialLink",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "S-1-5-21-566060928-2936574977-4293486541-526",
+          "PrincipalType": "Group",
+          "RightName": "AddKeyCredentialLink",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "S-1-5-21-3262959479-855567469-2661024141-519",
+          "PrincipalType": "Base",
+          "RightName": "GenericAll",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-544",
+          "PrincipalType": "Group",
+          "RightName": "WriteDacl",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-544",
+          "PrincipalType": "Group",
+          "RightName": "WriteOwner",
+          "IsInherited": true
+        },
+        {
+          "PrincipalSID": "NORTH.SEVENKINGDOMS.LOCAL-S-1-5-32-544",
+          "PrincipalType": "Group",
+          "RightName": "GenericWrite",
+          "IsInherited": true
+        }
+      ],
+      "ObjectIdentifier": "S-1-5-21-566060928-2936574977-4293486541-1104",
+      "IsDeleted": false,
+      "IsACLProtected": false
+    }
+  ],
+  "meta": { "methods": 29695, "type": "computers", "count": 2, "version": 5 }
+}

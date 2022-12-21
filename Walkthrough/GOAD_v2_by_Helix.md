@@ -23,9 +23,12 @@
     - [Password Spraying with Heartsbane password](#password-spraying-with-heartsbane-password)
     - [Password Spraying with iseedeadpeople password](#password-spraying-with-iseedeadpeople-password)
   - [Acces to the organization remotely](#acces-to-the-organization-remotely)
-    - [Runas with iseedeadpeople password](#runas-with-iseedeadpeople-password)
-  - [**Kerberoasting**](#kerberoasting)
+    - [Using Bloodhound with runas ouside the domain](#using-bloodhound-with-runas-ouside-the-domain)
+    - [Runas with iseedeadpeople password ( ADExplorer Dump )](#runas-with-iseedeadpeople-password--adexplorer-dump-)
+  - [Kerberoasting](#kerberoasting)
     - [Linux](#linux-1)
+  - [**Kerberoasting**](#kerberoasting-1)
+    - [Linux](#linux-2)
     - [Windows](#windows-1)
 - [Bibliography](#bibliography)
 
@@ -375,18 +378,88 @@ Password: `iseedeadpeople`.
 
 ### Password Spraying with iseedeadpeople password
 
-```bash
+First I boot a Windows 10 VM and I prepare de `/etc/hosts` file to resolve the domain name.
+> This machine is complety isolated from the network.
+
+We know:
+  - Ip of the Domain Controller `DC02`: **192.168.56.11**
+  - The domain name: **north.sevenkingdoms.local**
+
+At this point we are going to use the tool `runas` to get a shell with the user `brandon.stark` and the password `iseedeadpeople`.
+
+```cmd
+runas /netonly /user:north.sevenkingdoms.local\brandon.stark "powershell.exe"
 ```
+
+![We have a shell with the user brandon.stark](/assets/images/runas.png)
+
+> We have a shell with the user brandon.stark
+
+We can run now sharphound to get the information of the domain.
+
+```cmd
+.\SharpHound.exe --CollectionMethod All -d north.sevenkingdoms.local --domaincontroller 192.168.56.11
+```
+
+![SharpHound](/assets/images/sharhound.png)
+
+> `--CollectionMethod All` is **NOISE AF** on a real assesment bc it do a lot of **LDAP queries**.
+> > U should optimize the query as u want to be more stealthy on a real assesment.
 
 ## Acces to the organization remotely
 
-### Runas with iseedeadpeople password
+### Using Bloodhound with runas ouside the domain
+
+### Runas with iseedeadpeople password ( ADExplorer Dump )
+> A little bit noise on a real assesment but a better way than `--CollectionMethod All` Bloodhound option.
+
+First I boot a Windows 10 VM and I prepare de `/etc/hosts` file to resolve the domain name.
+> This machine is complety isolated from the network.
+
+We know:
+  - Ip of the Domain Controller `DC02`: **192.168.56.11**
+  - The domain name: **north.sevenkingdoms.local**
+
+At this point we are going to use the tool `runas` to get a shell with the user `brandon.stark` and the password `iseedeadpeople`.
+
+```cmd
+runas /netonly /user:north.sevenkingdoms.local\brandon.stark "powershell.exe"
+```
+
+![We have a shell with the user brandon.stark](/assets/images/runas.png)
+
+> We have a shell with the user brandon.stark
+
+Here we can see the user `brandon.stark` has the permission to run `powershell.exe` as administrator.
+
+Now we can use `ADExplorer` on the context of the user `brandon.stark` as we are inside the domain with a valid machine.
+
+![ADExplorer](/assets/images/ADexplorerRemotly.png)
+
+We are going to create a Snapshot with `ADExplorer` because we are going to use it later using [`ADExplorerSnapshot.py`](https://github.com/c3c/ADExplorerSnapshot.py).
+
+![ADExplorerSnapshot](/assets/images/snapshot.png)
+
+This tool is going to parse the snapshot to use the info on bloodhound.
 
 ```bash
 python3 ../../Downloads/ADExplorerSnapshot.py/ADExplorerSnapshot.py ../GOAD_v2_WriteUp_by_Helix/assets/files/DC02.dat
-
 ```
 
+![ADExplorerSnapshot](/assets/images/ADexplorerSnapshot.png)
+
+> **IMPORTANT**: We need to use **4.1.0** version of **Bloodhound** because the latest version has a bug with the `ADExplorerSnapshot.py` tool.
+
+![jsonFIles](/assets/images/json_files.png)
+> We have the json files to use with bloodhound
+
+**Bloodhound**
+
+![bloodhound](/assets/images/bloodHoundCap.png)
+
+## Kerberoasting
+
+### Linux
 
 ## **Kerberoasting**
 
