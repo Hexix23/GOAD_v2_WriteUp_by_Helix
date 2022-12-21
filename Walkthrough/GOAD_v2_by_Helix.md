@@ -1,25 +1,33 @@
 # GOAD V2
 
 # Table of contents
-1. [Enumeration](#enumeration)
-   1. [Pre-Access](#pre-access)
-      1. [Crackmapexec](#crackmapexec)
-      2. [NMAP](#nmap)
-      3. [DNS](#dns)
-   2. [SetUp etc/hosts & kerberos (linux) (Loading)](#set-up-etc-hosts-kerberos-linux-loading)
-      1. [etc/hosts](#etc-hosts)
-      2. [SetUp Kerberos in Linux](#setup-kerberos-in-linux)
-   3. [Anonymous Enumeration](#anonymous-enumeration)
-      1. [Anonymous User Enum](#anonymous-user-enum) 
-      2. [Anonymous Share Enumeration](#anonymous-share-enumeration)
-2. [Initial Access](#initial-access)
-   1. [AS-REP Roasting](#as-rep-roasting)
-      1. [Linux](#linux)
-      2. [Windows](#windows)
-   2. [Kerberoasting](#kerberoasting)
-      1. [Linux](#linux-1)
-      2. [Windows](#windows-1)
-3. [Bibliography](#bibliography)
+- [GOAD V2](#goad-v2)
+- [Table of contents](#table-of-contents)
+- [Enumeration](#enumeration)
+  - [Pre-Access](#pre-access)
+    - [Crackmapexec](#crackmapexec)
+    - [NMAP](#nmap)
+    - [DNS](#dns)
+  - [SetUp etc/hosts \& kerberos ( linux ) ( Loading )](#setup-etchosts--kerberos--linux---loading-)
+    - [etc/hosts](#etchosts)
+    - [SetUp Kerberos in Linux](#setup-kerberos-in-linux)
+  - [Anonymous Enumeration](#anonymous-enumeration)
+    - [Anonymous User Enum](#anonymous-user-enum)
+    - [Anonymous Share Enumeration](#anonymous-share-enumeration)
+- [Initial Access](#initial-access)
+  - [AS-REP Roasting](#as-rep-roasting)
+    - [Linux](#linux)
+    - [Windows](#windows)
+- [Valid User](#valid-user)
+  - [Password Spraying](#password-spraying)
+    - [Password Spraying with Heartsbane password](#password-spraying-with-heartsbane-password)
+    - [Password Spraying with iseedeadpeople password](#password-spraying-with-iseedeadpeople-password)
+  - [Acces to the organization remotely](#acces-to-the-organization-remotely)
+    - [Runas with iseedeadpeople password](#runas-with-iseedeadpeople-password)
+  - [**Kerberoasting**](#kerberoasting)
+    - [Linux](#linux-1)
+    - [Windows](#windows-1)
+- [Bibliography](#bibliography)
 
 # Enumeration
 
@@ -212,16 +220,16 @@ Crackmapexec.cmedb command
 crackmapexec.cme 192.168.56.11 --users
 ```
 
-north.sevenkingdoms.local\**Guest**             Built-in account for guest access to the computer/domain
-north.sevenkingdoms.local\**arya.stark**        Arya Stark
-north.sevenkingdoms.local\**sansa.stark**     Sansa Stark
-north.sevenkingdoms.local\**brandon.stark** Brandon Stark
-north.sevenkingdoms.local\**rickon.stark**     Rickon Stark
-north.sevenkingdoms.local\**hodor**              Brainless Giant
-north.sevenkingdoms.local\**jon.snow**         Jon Snow
-north.sevenkingdoms.local\**samwell.tarly**   Samwell Tarly (**Password : Heartsbane**)
-north.sevenkingdoms.local\**jeor.mormont**  Jeor Mormont
-north.sevenkingdoms.local\**sql_svc**           sql service
+1. north.sevenkingdoms.local\**Guest**             Built-in account for guest access to the computer/domain
+2. north.sevenkingdoms.local\**arya.stark**        Arya Stark
+3. north.sevenkingdoms.local\**sansa.stark**     Sansa Stark
+4. north.sevenkingdoms.local\**brandon.stark** Brandon Stark
+5. north.sevenkingdoms.local\**rickon.stark**     Rickon Stark
+6. north.sevenkingdoms.local\**hodor**              Brainless Giant
+7. north.sevenkingdoms.local\**jon.snow**         Jon Snow
+8. north.sevenkingdoms.local\**samwell.tarly**   Samwell Tarly (**Password : Heartsbane**)
+9. north.sevenkingdoms.local\**jeor.mormont**  Jeor Mormont
+10. north.sevenkingdoms.local\**sql_svc**           sql service
 
 ```powershell
 net rpc group members 'Domain Users' -W 'NORTH' -I '192.168.56.11' -U '%'
@@ -355,6 +363,30 @@ Stopped: Mon Dec 19 23:27:58 2022
 Password: `iseedeadpeople`.
 
 ### Windows
+
+# Valid User 
+
+## Password Spraying
+
+### Password Spraying with Heartsbane password
+
+```bash
+```
+
+### Password Spraying with iseedeadpeople password
+
+```bash
+```
+
+## Acces to the organization remotely
+
+### Runas with iseedeadpeople password
+
+```bash
+python3 ../../Downloads/ADExplorerSnapshot.py/ADExplorerSnapshot.py ../GOAD_v2_WriteUp_by_Helix/assets/files/DC02.dat
+
+```
+
 
 ## **Kerberoasting**
 
