@@ -223,16 +223,16 @@ Crackmapexec.cmedb command
 crackmapexec.cme 192.168.56.11 --users
 ```
 
-1. north.sevenkingdoms.local\\**Guest**             Built-in account for guest access to the computer/domain
-2. north.sevenkingdoms.local\\**arya.stark**        Arya Stark
-3. north.sevenkingdoms.local\\**sansa.stark**     Sansa Stark
-4. north.sevenkingdoms.local\\**brandon.stark** Brandon Stark
-5. north.sevenkingdoms.local\\**rickon.stark**     Rickon Stark
-6. north.sevenkingdoms.local\\**hodor**              Brainless Giant
-7. north.sevenkingdoms.local\\**jon.snow**         Jon Snow
-8. north.sevenkingdoms.local\\**samwell.tarly**   Samwell Tarly (**Password : Heartsbane**)
-9. north.sevenkingdoms.local\\**jeor.mormont**  Jeor Mormont
-10. north.sevenkingdoms.local\\**sql_svc**           sql service
+1. north.sevenkingdoms.local\\**Guest**       ->      Built-in account for guest access to the computer/domain
+2. north.sevenkingdoms.local\\**arya.stark**   ->     Arya Stark
+3. north.sevenkingdoms.local\\**sansa.stark**  ->   Sansa Stark
+4. north.sevenkingdoms.local\\**brandon.stark**-> Brandon Stark
+5. north.sevenkingdoms.local\\**rickon.stark** ->    Rickon Stark
+6. north.sevenkingdoms.local\\**hodor**        ->      Brainless Giant
+7. north.sevenkingdoms.local\\**jon.snow**     ->    Jon Snow
+8. north.sevenkingdoms.local\\**samwell.tarly**->   Samwell Tarly (**Password : Heartsbane**)
+9. north.sevenkingdoms.local\\**jeor.mormont** -> Jeor Mormont
+10. north.sevenkingdoms.local\\**sql_svc**     ->      sql service
 
 ```powershell
 net rpc group members 'Domain Users' -W 'NORTH' -I '192.168.56.11' -U '%'
