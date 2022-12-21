@@ -223,16 +223,16 @@ Crackmapexec.cmedb command
 crackmapexec.cme 192.168.56.11 --users
 ```
 
-1. north.sevenkingdoms.local\**Guest**             Built-in account for guest access to the computer/domain
-2. north.sevenkingdoms.local\**arya.stark**        Arya Stark
-3. north.sevenkingdoms.local\**sansa.stark**     Sansa Stark
-4. north.sevenkingdoms.local\**brandon.stark** Brandon Stark
-5. north.sevenkingdoms.local\**rickon.stark**     Rickon Stark
-6. north.sevenkingdoms.local\**hodor**              Brainless Giant
-7. north.sevenkingdoms.local\**jon.snow**         Jon Snow
-8. north.sevenkingdoms.local\**samwell.tarly**   Samwell Tarly (**Password : Heartsbane**)
-9. north.sevenkingdoms.local\**jeor.mormont**  Jeor Mormont
-10. north.sevenkingdoms.local\**sql_svc**           sql service
+1. north.sevenkingdoms.local\\**Guest**             Built-in account for guest access to the computer/domain
+2. north.sevenkingdoms.local\\**arya.stark**        Arya Stark
+3. north.sevenkingdoms.local\\**sansa.stark**     Sansa Stark
+4. north.sevenkingdoms.local\\**brandon.stark** Brandon Stark
+5. north.sevenkingdoms.local\\**rickon.stark**     Rickon Stark
+6. north.sevenkingdoms.local\\**hodor**              Brainless Giant
+7. north.sevenkingdoms.local\\**jon.snow**         Jon Snow
+8. north.sevenkingdoms.local\\**samwell.tarly**   Samwell Tarly (**Password : Heartsbane**)
+9. north.sevenkingdoms.local\\**jeor.mormont**  Jeor Mormont
+10. north.sevenkingdoms.local\\**sql_svc**           sql service
 
 ```powershell
 net rpc group members 'Domain Users' -W 'NORTH' -I '192.168.56.11' -U '%'
@@ -378,6 +378,10 @@ Password: `iseedeadpeople`.
 
 ### Password Spraying with iseedeadpeople password
 
+## Acces to the organization remotely
+
+### Using Bloodhound with runas ouside the domain
+
 First I boot a Windows 10 VM and I prepare de `/etc/hosts` file to resolve the domain name.
 > This machine is complety isolated from the network.
 
@@ -405,10 +409,6 @@ We can run now sharphound to get the information of the domain.
 
 > `--CollectionMethod All` is **NOISE AF** on a real assesment bc it do a lot of **LDAP queries**.
 > > U should optimize the query as u want to be more stealthy on a real assesment.
-
-## Acces to the organization remotely
-
-### Using Bloodhound with runas ouside the domain
 
 ### Runas with iseedeadpeople password ( ADExplorer Dump )
 > A little bit noise on a real assesment but a better way than `--CollectionMethod All` Bloodhound option.
